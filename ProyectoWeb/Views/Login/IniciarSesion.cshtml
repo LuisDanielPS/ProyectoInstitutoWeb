@@ -1,0 +1,67 @@
+﻿@model CCIH.Entities.UsuarioEnt
+
+@{
+    ViewBag.Title = "IniciarSesion";
+}
+
+<section id="hero">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row justify-content-center align-items-center h-1">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="margin-top: -30px">
+                <div class="card-body p-2 text-center" style="background-color: rgba(0, 0, 0, 0.5);">
+
+                    @using (Html.BeginForm("IniciarSesion", "Login", FormMethod.Post))
+                    {
+                        <div class="mb-md-5 mt-md-2 pb-1">
+                            <h2 class="fw-bold mb-2 text-uppercase">Inicio de sesion</h2>
+                            <p class="text-white-50 mb-5">Por favor, ingrese su usuario y contraseña</p>
+
+                            @if (ViewBag.MsjPantalla != null)
+                            {
+                                <div style="text-align:center" class="alert alert-warning" role="alert">
+                                    @ViewBag.MsjPantalla
+                                </div>
+                            }
+
+                            <div class="form-outline form-white mb-2" style="width: 60%; margin: auto;">
+                                <label class="text-white" for="LoginUsuario">Usuario</label>
+                                @Html.TextBoxFor(
+                            m => m.Usuario,
+                            new
+                            {
+                            @type = "text",
+                            @placeholder = "Ingrese el Usuario",
+                            @style = "text-align: center",
+                            @class = "form-control form-control-lg",
+                            @required = "true"
+                            })
+                            </div>
+
+                            <div class="form-outline form-white mb-4" style="width: 60%; margin: auto;">
+                                <label class="text-white" for="LoginContraseña">Contraseña</label>
+                                @Html.TextBoxFor(
+                            m => m.PwUsuario,
+                            new
+                            {
+                            @type = "password",
+                            @placeholder = "Ingrese Contraseña",
+                            @style = "text-align: center",
+                            @class = "form-control form-control-lg",
+                            required = "true"
+                            })
+                            </div>
+
+                            <button class="btn btn-outline-light btn-lg px-5" id="btn" type="submit">Entrar</button>
+                            <br />
+                            <br />
+                            <br />
+                            <button class="btn btn-outline-secondary"><a href="~/Home/loginReset" style="color:white">Olvide mi Contraseña</a></button>
+                            <button class="btn btn-outline-secondary"><a href="@Url.Action("Registrarse", "Login")" style="color:white">No tengo cuenta</a></button>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -7,14 +7,17 @@ namespace CCIH.Entities
 {
     public class UsuarioRegistrarEnt
     {
-        public string CorreoElectronico { get; set; }
-        public string Nombre { get; set; }
-        public string Cedula { get; set; }
-        public string Apellido1 { get; set; }
-        public string Apellido2 { get; set; }
-        public string Contrasenna { get; set; }
-        public string ConfirmarContrasenna { get; set; }
-
-
+        public string Correo { get; set; } = string.Empty;
+        public string Nombre { get; set; } = string.Empty;
+        public string Apellido1 { get; set; } = string.Empty;
+        public string Apellido2 { get; set; } = string.Empty;
+        public DateTime FechaNacimiento { get; set; }
+        public string Telefono { get; set; } = string.Empty;
+        public string Direccion { get; set; } = string.Empty;
+        public int IdEstatus { get; set; }
+        public int IdRol { get; set; }
+        public string Usuario { get; set; } = string.Empty;
+        public string PwUsuario { get; set; } = string.Empty;
+        public string ConfirmarPwUsuario { get; set; } = string.Empty;
     }
 }

@@ -1,0 +1,201 @@
+﻿@model CCIH.Entities.UsuarioRegistrarEnt
+
+@{
+    ViewBag.Title = "Registrarse";
+}
+    <section id="hero">
+        <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+            <div class="row justify-content-center align-items-center h-1">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="margin-top: -30px; width: 100%;">
+                    <div class="card-body p-2 text-center" style="background-color: rgba(255, 255, 255, 0.7); ">
+
+                    @using (Html.BeginForm("Registrarse", "Login", FormMethod.Post))
+{
+                        <div class="mb-md-4 mt-md-4 pb-1">
+                            <h2 class="fw-bold text-uppercase" style="color:black">Proceso de registro</h2>
+                            <br>
+                            <p class="text-black-70 mb-5">Por favor ingrese la informacion para registrarse en nuestra plataforma!</p>
+
+                            @if (ViewBag.MsjPantalla != null)
+                            {
+                                <div style="text-align:center" class="alert alert-warning" role="alert">
+                                    @ViewBag.MsjPantalla
+                                </div>
+                            }
+
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-3 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                m => m.Correo,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Correo Electronico",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                </div>
+
+                                <div class="col-2 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                        m => m.Nombre,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Nombre",
+                                            @id = "nombre",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                </div>
+
+                                <div class="col-2 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                        m => m.Apellido1,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Primer Apellido",
+                                            @id = "pApellido",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                </div>
+
+                                <div class="col-2 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                        m => m.Apellido2,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Segundo Apellido",
+                                            @id = "sApellido",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                </div>
+
+                                <div class="col-2 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                    m => m.FechaNacimiento,
+                                    new
+                                    {
+                                    @type = "date",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg"
+                                    })
+                                </div>
+
+                                <div class="col-2 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                    m => m.Telefono,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Teléfono",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                <div class="col-2 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                    m => m.Direccion,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Dirección",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                <div class="col-3 form-outline form-white mb-4">
+                                    @Html.TextBoxFor(
+                                    m => m.Usuario,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Usuario autenticación",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                <div class="row justify-content-center align-items-center">
+
+                                    <div class="col-3 form-outline form-white mb-4">
+                                        @Html.TextBoxFor(
+                                            m => m.PwUsuario,
+                                            new
+                                            {
+                                                @type = "text",
+                                                @placeholder = "Contraseña",
+                                                @style = "text-align: center",
+                                                @class = "form-control form-control-lg",
+                                                @required = "required"
+                                            })
+                                    </div>
+
+                                    <div class="col-3 form-outline form-white mb-4">
+                                        @Html.TextBoxFor(
+                                            m => m.ConfirmarPwUsuario,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Repita Contraseña",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                        })
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Modal -->
+                        <button type="submit" class="btn btn-outline-success btn-lg px-5">
+                            Registrarme!
+                        </button>
+                        <br>
+                        <br>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- End Hero -->
+    <!-- Modal -->
+    <div class="modal fade" id="basicModal" tabindex="-1">
+        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+            <div class="modal-content justify-content-center align-items-center">
+                <div class="modal-header align-items-center">
+                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-award-fill text-success"></i>  Felicidades  <i class="bi bi-award-fill text-success"></i></h5>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    Muchas Feliciades, ha completado el proceso de registro, por favor ingrese con su usuario y contraseña.
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modal-->

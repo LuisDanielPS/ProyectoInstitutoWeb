@@ -22,7 +22,7 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-3 form-outline form-white">
                                     @Html.TextBoxFor(
-                                        m => m.CorreoElectronico,
+                                m => m.Correo,
                                             new
                                             {
                                             @type = "text",
@@ -35,21 +35,7 @@
 
                                 <div class="col-2 form-outline form-white">
                                     @Html.TextBoxFor(
-                                        m => m.Cedula,
-                                            new
-                                            {
-                                            @type = "text",
-                                            @placeholder = "Cedula",
-                                            @id = "cedula",
-                                            @style = "text-align: center",
-                                            @class = "form-control form-control-lg",
-                                            @required = "required"
-                                            })
-                                </div>
-
-                                <div class="col-2 form-outline form-white">
-                                    @Html.TextBoxFor(
-                                        m => m.Cedula,
+                                m => m.Nombre,
                                             new
                                             {
                                             @type = "text",
@@ -98,7 +84,7 @@
 
                                     <div class="col-3 form-outline form-white">
                                         @Html.TextBoxFor(
-                                            m => m.Contrasenna,
+                                    m => m.PwUsuario,
                                             new
                                             {
                                             @type = "text",
@@ -110,7 +96,7 @@
 
                                     <div class="col-3 form-outline form-white">
                                         @Html.TextBoxFor(
-                                            m => m.ConfirmarContrasenna,
+                                    m => m.ConfirmarPwUsuario,
                                                 new
                                                 {
                                                 @type = "text",
