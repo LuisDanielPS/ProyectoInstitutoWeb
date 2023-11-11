@@ -36,7 +36,7 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
             <a><img src="~/Home/img/Icono.png" align="left" style= width="60" height="60"></a>
-               <h1 class="logo me-auto"><a href="">Centro Cultural de Idiomas Heredia</a></h1>
+            <h1 class="logo me-auto"> <a href="@Url.Action("index","Home")">Centro Cultural de Idiomas Heredia</a></h1>
 
                 <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
@@ -109,22 +109,22 @@
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Rutas Rapidas</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("index","Home")">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Acerca","Home")">Acerca de</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Profesores</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Contacto</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Contacto","Home")">Contacto</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Nuestros Cursos</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Ingles Intensivo Virtual</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Ingles Intensivo Presencial</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Ingles Semi-Intensivo Virtual</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Ingles Semi-Intensivo Presencial</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Niños Virtual</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Portugues Virtual</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Ing_Intensivo_V","Home")">Ingles Intensivo Virtual</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Ing_Intensivo_P","Home")">Ingles Intensivo Presencial</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Ing_Semi_Intensivo_V","Home")">Ingles Semi-Intensivo Virtual</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Ing_Semi_Intensivo_P","Home")">Ingles Semi-Intensivo Presencial</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Ing_Niños_V","Home")">Niños Virtual</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Portu_Semi_Intensivo_V","Home")">Portugues Virtual</a></li>
                         </ul>
                     </div>
 

@@ -9,93 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProyectoWeb
 build_property.RootNamespace = ProyectoWeb
-build_property.ProjectDir = C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\
+build_property.ProjectDir = D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb
+build_property.MSBuildProjectDirectory = D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Acerca.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Acerca.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2VyY2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Contacto.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Contacto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Cursos.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Cursos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJzb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/index.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Ing_Intensivo_P.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Ing_Intensivo_P.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmdfSW50ZW5zaXZvX1AuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Ing_Intensivo_V.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Ing_Intensivo_V.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmdfSW50ZW5zaXZvX1YuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Ing_Niños_V.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Ing_Niños_V.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmdfTmnDsW9zX1YuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Ing_Semi_Intensivo_P.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Ing_Semi_Intensivo_P.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmdfU2VtaV9JbnRlbnNpdm9fUC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Ing_Semi_Intensivo_V.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Ing_Semi_Intensivo_V.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmdfU2VtaV9JbnRlbnNpdm9fVi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Login.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/LoginReset.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/LoginReset.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblJlc2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Portu_Semi_Intensivo_V.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Portu_Semi_Intensivo_V.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3J0dV9TZW1pX0ludGVuc2l2b19WLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/PreMatricular.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/PreMatricular.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmVNYXRyaWN1bGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Home/Registration.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Home/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Login/IniciarSesion.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Login/IniciarSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5pY2lhclNlc2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Login/Registrarse.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Login/Registrarse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0cmFyc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Shared/Error.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Shared/_Layout.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/Shared/_Layout_Administracion.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/Shared/_Layout_Administracion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfQWRtaW5pc3RyYWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/_ViewImports.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Documentos Johan/Progra Avanzada en Web/ProyectoFinal/WEB/ProyectoWeb/Views/_ViewStart.cshtml]
+[D:/Proyectos Github/ProyectoInstitutoWeb/ProyectoWeb/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

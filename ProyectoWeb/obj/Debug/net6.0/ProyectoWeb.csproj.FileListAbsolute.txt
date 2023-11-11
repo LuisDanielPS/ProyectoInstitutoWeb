@@ -55,3 +55,32 @@ C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WE
 C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.pdb
 C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\obj\Debug\net6.0\ref\ProyectoWeb.dll
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\appsettings.Development.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\appsettings.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.staticwebassets.runtime.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.exe
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.deps.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.runtimeconfig.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.dll
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.pdb
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.csproj.AssemblyReference.cache
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.AssemblyInfoInputs.cache
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.AssemblyInfo.cs
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.csproj.CoreCompileInputs.cache
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.MvcApplicationPartsAssemblyInfo.cache
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.RazorAssemblyInfo.cache
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.RazorAssemblyInfo.cs
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.ProyectoWeb.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.build.ProyectoWeb.props
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProyectoWeb.props
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProyectoWeb.props
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.build.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.development.json
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\scopedcss\bundle\ProyectoWeb.styles.css
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.dll
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\refint\ProyectoWeb.dll
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.pdb
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.genruntimeconfig.cache
+D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ref\ProyectoWeb.dll
