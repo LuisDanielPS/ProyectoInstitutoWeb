@@ -23,6 +23,13 @@ namespace ProyectoWeb.Controllers
         [HttpGet]
         public IActionResult IniciarSesion()
         {
+            bool registroExitoso = TempData["RegistroExitoso"] != null && (bool)TempData["RegistroExitoso"];
+
+            if (registroExitoso)
+            {
+                ViewBag.RegistroExitoso = "Registro Exitoso";
+                TempData.Remove("RegistroExitoso");
+            }
             return View();
         }
 
@@ -35,13 +42,13 @@ namespace ProyectoWeb.Controllers
         [HttpPost]
         public IActionResult IniciarSesion(UsuarioEnt entidad)
         {
+           
             if (entidad.Usuario != null && entidad.PwUsuario != null)
             {
                 var resp = _usuarioModel.IniciarSesion(entidad);
                 if (resp != null)
                 {
                     HttpContext.Session.SetString("NombreUsuario", resp.Nombre);
-                    //HttpContext.Session.SetString("TokenUsuario", resp.Token);
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -68,7 +75,10 @@ namespace ProyectoWeb.Controllers
                     var resp = _usuarioModel.RegistrarUsuario(entidad);
 
                     if (resp == 1)
+                    {
+                        TempData["RegistroExitoso"] = true;
                         return RedirectToAction("IniciarSesion", "Login");
+                    }
                     else if (resp == 150)
                     {
                         ViewBag.MsjPantalla = "Ya existe un usuario con ese correo, por favor verifique";

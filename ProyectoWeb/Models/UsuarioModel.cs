@@ -1,4 +1,7 @@
-﻿using CCIH.Entities;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Net.Http.Headers;
+using CCIH.Entities;
 
 namespace ProyectoWeb.Models
 {
@@ -23,14 +26,17 @@ namespace ProyectoWeb.Models
             JsonContent obj = JsonContent.Create(entidad);
             var resp = _httpClient.PostAsync(url, obj).Result;
 
-            if (resp.IsSuccessStatusCode)
-                return resp.Content.ReadFromJsonAsync<UsuarioEnt>().Result;
-            else
-                return null;
+
+                if (resp.IsSuccessStatusCode)
+                    return resp.Content.ReadFromJsonAsync<UsuarioEnt>().Result;
+                else
+                    return null;
+
+           
         }
 
         public int RegistrarUsuario(UsuarioRegistrarEnt entidad)
-        {
+        { 
             string url = _urlApi + "api/Login/RegistrarUsuario";
             JsonContent obj = JsonContent.Create(entidad);
             var resp = _httpClient.PostAsync(url, obj).Result;

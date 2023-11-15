@@ -10,7 +10,7 @@
             <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="margin-top: -30px">
                 <div class="card-body p-2 text-center" style="background-color: rgba(0, 0, 0, 0.5);">
 
-                    @using (Html.BeginForm("IniciarSesion", "Login", FormMethod.Post))
+                    @using (Html.BeginForm("IniciarSesion", "Login", FormMethod.Post, new { id = "loginForm" }))
                     {
                         <div class="mb-md-5 mt-md-2 pb-1">
                             <h2 class="fw-bold mb-2 text-uppercase">Inicio de sesion</h2>
@@ -18,8 +18,14 @@
 
                             @if (ViewBag.MsjPantalla != null)
                             {
-                                <div style="text-align:center" class="alert alert-warning" role="alert">
+                                <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-warning" role="alert">
                                     @ViewBag.MsjPantalla
+                                </div>
+                            }
+                            @if (ViewBag.RegistroExitoso != null)
+                            {
+                                <div id ="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-success" role="alert">
+                                    @ViewBag.RegistroExitoso
                                 </div>
                             }
 
@@ -33,7 +39,8 @@
                             @placeholder = "Ingrese el Usuario",
                             @style = "text-align: center",
                             @class = "form-control form-control-lg",
-                            @required = "true"
+                            @required = "true",
+                            @id = "uname"
                             })
                             </div>
 
@@ -47,7 +54,8 @@
                             @placeholder = "Ingrese Contraseña",
                             @style = "text-align: center",
                             @class = "form-control form-control-lg",
-                            required = "true"
+                            required = "true",
+                            @id = "passw"
                             })
                             </div>
 
@@ -65,3 +73,13 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Esperar 5 segundos y luego ocultar el mensaje
+    setTimeout(function () {
+        var mensajeDiv = document.getElementById('Msj');
+        mensajeDiv.style.display = 'none';
+
+    }, 5000); // 5000 milisegundos = 5 segundos
+
+</script>
