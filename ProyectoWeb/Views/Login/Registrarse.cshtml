@@ -8,21 +8,22 @@
     <section id="hero">
         <div class="container position-relative">
             <div class="row justify-content-center align-items-center h-1">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="margin-top: -45px; width: 1000px">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="margin-top: -47px; width: 1000px">
                     <div class="card-body p-2 text-center" style="background-color: rgba(255, 255, 255, 0.7); ">
 
-                        @if (ViewBag.MsjPantalla != null)
-                        {
-                            <div style="text-align:center; margin-top: 0%;" class="alert alert-warning" role="alert">
-                                @ViewBag.MsjPantalla
-                            </div>
-                        }
+                        
                         <div class="mb-md-5 mt-md-4 pb-1">
                             <h2 class="fw-bold text-uppercase" style="color: black">Proceso de Registro</h2>
 
                             <p class="text-black-70 mb-5">Por favor ingrese la informacion para registrarse en nuestra plataforma!</p>
+                            @if (ViewBag.MsjPantalla != null)
+                            {
+                                <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-danger" role="alert">
+                                    @ViewBag.MsjPantalla
+                                </div>
+                            }
 
-                            <div class="row" style="text-align:center; position:center; margin-top: -3%;">
+                            <div class="row" style="text-align:center; position:center;">
                                 <div class="col-md-6">
                                     <div class="form-group " style="width: 450px; text-align: left">
                                         <label>Correo electrónico</label>
@@ -194,3 +195,13 @@
 
     <!-- End Modal-->
 }
+
+<script>
+    // Esperar 5 segundos y luego ocultar el mensaje
+    setTimeout(function () {
+        var mensajeDiv = document.getElementById('Msj');
+        mensajeDiv.style.display = 'none';
+
+    }, 5000); // 5000 milisegundos = 5 segundos
+
+</script>
