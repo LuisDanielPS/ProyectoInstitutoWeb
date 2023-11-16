@@ -10,22 +10,22 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="~/assets/Administracion/img/Icono.png" rel="icon">
+    <link href="~/administracion/img/icono.png" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="~/assets/Administracion/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="~/assets/Administracion/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="~/assets/Administracion/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="~/assets/Administracion/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="~/assets/Administracion/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="~/assets/Administracion/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/Administracion/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Administracion/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/Administracion/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/Administracion/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/Administracion/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/Administracion/vendor/remixicon/remixicon.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="~/assets/Administracion/css/style.css" rel="stylesheet">
+    <link href="~/Administracion/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -35,7 +35,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="d-flex align-items-center justify-content-between">
             <a href="/Administracion/Inicio" class="logo d-flex align-items-center">
-                <img src="~/assets/Administracion/img/Icono.png" alt="">
+                <img src="~/Administracion/img/Icono.png" alt="">
                 <span class="d-none d-lg-block">Centro Cultural</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -49,20 +49,19 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">@*@Session["[Usuario]"]*@</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">@Context.Session.GetString("NombreUsuario")</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>@*@Session["[Usuario]"]*@</h6>
-                            <span>@*@Session["[NombreRol]"]*@</span>
+                            <h6>@Context.Session.GetString("NombreUsuario")</h6>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="@Url.Action("EditarUsuario", "Usuario", new { i = 0@*Session["IdUsuario"]*@ })">
+                            <a class="dropdown-item d-flex align-items-center" href="@Url.Action("", "", new { i = 0 })">
 
                                 <i class="bi bi-person"></i>
                                 <span>My Profile</span>
@@ -77,14 +76,14 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="@Url.Action("CambiarContraseña","Usuario")">
+                            <a class="dropdown-item d-flex align-items-center" href="@Url.Action("","")">
                                 <i class="bi bi-arrow-left-right"></i>
                                 <span>Cambiar contraseña</span>
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="@Url.Action("CerrarSesion","Home")">
+                            <a class="dropdown-item d-flex align-items-center" href="@Url.Action("","")">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Cerrar Sesion</span>
                             </a>
@@ -119,7 +118,7 @@
                     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
                         <li>
-                            <a href="@Url.Action("VerClientes","Matricula")">
+                            <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>Clientes</span>
                             </a>
                         </li>
@@ -134,12 +133,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("ConsultarPreMatricula","Matricula")">
+                            <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>PreMatriculas</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("ConsultarPreMatricula","Matricula")">
+                            <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>Libros</span>
                             </a>
                         </li>
@@ -154,17 +153,17 @@
                     </a>
                     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="@Url.Action("Index","Usuario")">
+                            <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>Lista de Usuarios</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("RegistrarUsuario","Usuario")">
+                            <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>Registrar Usuario</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("ListarRoles","Rol")">
+                            <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>Administrar Roles</span>
                             </a>
                         </li>
@@ -178,13 +177,13 @@
                     </a>
                     <ul id="Grupos-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Nuevo</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Nuevo</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Consultar</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Consultar</span>
                             </a>
                         </li>
                     </ul>
@@ -196,23 +195,23 @@
                     </a>
                     <ul id="Profesores-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Nuevo</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Nuevo</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Consultar</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Consultar</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Asistencia</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Asistencia</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Asignaciones</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Asignaciones</span>
                             </a>
                         </li>
                     </ul>
@@ -224,13 +223,13 @@
                     </a>
                     <ul id="Estudiante-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Control</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Control</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Casos</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Casos</span>
                             </a>
                         </li>
                     </ul>
@@ -242,13 +241,13 @@
                     </a>
                     <ul id="Examenes-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Curso</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Curso</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Ubicacion</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Ubicacion</span>
                             </a>
                         </li>
                     </ul>
@@ -260,23 +259,23 @@
                     </a>
                     <ul id="Pagos-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Ingresos</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Ingresos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Egresos</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Egresos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Control Pagos CCIH</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Control Pagos CCIH</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
-                                <i class="bi bi-circle"></i><span>Control Pagos Profesores</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Control Pagos Profesores</span>
                             </a>
                         </li>
                     </ul>
@@ -289,18 +288,18 @@
                     </a>
                     <ul id="Reporte-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Moras</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Moras</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Facturas</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Facturas</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Notas</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Notas</span>
                             </a>
                         </li>
                     </ul>
@@ -316,8 +315,8 @@
                     </a>
                     <ul id="Perfil-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Consultar</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Consultar</span>
                             </a>
                         </li>
                     </ul>
@@ -329,8 +328,8 @@
                     </a>
                     <ul id="Notas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Consultar</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Consultar</span>
                             </a>
                         </li>
                     </ul>
@@ -342,8 +341,8 @@
                     </a>
                     <ul id="Clase-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Consultar</span>
+                        <a href="@Url.Action("","")">
+                            <i class="bi bi-circle"></i><span>Consultar</span>
                             </a>
                         </li>
                     </ul>
@@ -357,34 +356,21 @@
 
     @RenderBody()
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>Centro Cultural de Idiomas Heredia @DateTime.Now.Year</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            Designed by <a>Esteban Moreira</a>
-        </div>
-    </footer><!-- End Footer -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="~/assets/Administracion/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="~/assets/Administracion/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="~/assets/Administracion/vendor/chart.js/chart.umd.js"></script>
-    <script src="~/assets/Administracion/vendor/echarts/echarts.min.js"></script>
-    <script src="~/assets/Administracion/vendor/quill/quill.min.js"></script>
-    <script src="~/assets/Administracion/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="~/assets/Administracion/vendor/tinymce/tinymce.min.js"></script>
-    <script src="~/assets/Administracion/vendor/php-email-form/validate.js"></script>
-    <script src="~/assets/Administracion/js/DataTable/code.jquery.com_jquery-3.7.0.js"></script>
+    <script src="~/Administracion/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="~/Administracion/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Administracion/vendor/chart.js/chart.umd.js"></script>
+    <script src="~/Administracion/vendor/echarts/echarts.min.js"></script>
+    <script src="~/Administracion/vendor/quill/quill.min.js"></script>
+    <script src="~/Administracion/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="~/Administracion/vendor/tinymce/tinymce.min.js"></script>
+    <script src="~/Administracion/vendor/php-email-form/validate.js"></script>
+    <script src="~/Administracion/js/DataTable/code.jquery.com_jquery-3.7.0.js"></script>
 
 
     <!-- Template Main JS File -->
-    <script src="~/assets/Administracion/js/main.js"></script>
-    @RenderSection("ApiUsuario", required: false)
-
+    <script src="~/Administracion/js/main.js"></script>
 </body>
 
 </html>

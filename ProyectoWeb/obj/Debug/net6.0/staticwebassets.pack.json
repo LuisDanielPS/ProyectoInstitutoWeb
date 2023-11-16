@@ -1853,6 +1853,10 @@
       "PackagePath": "staticwebassets\\Home\\img\\trainers\\trainer-3.jpg"
     },
     {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Home\\js\\ConsultarNombre.js",
+      "PackagePath": "staticwebassets\\Home\\js\\ConsultarNombre.js"
+    },
+    {
       "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Home\\js\\main.js",
       "PackagePath": "staticwebassets\\Home\\js\\main.js"
     },

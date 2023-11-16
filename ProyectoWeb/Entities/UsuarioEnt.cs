@@ -7,8 +7,9 @@ namespace CCIH.Entities
 {
     public class UsuarioEnt
     {
-        public long IdCliente { get; set; }
+        public long IdUsuario { get; set; }
         public string Correo { get; set; } = string.Empty;
+        public string Cedula { get; set; } = string.Empty;
         public string Nombre { get; set; } = string.Empty;
         public string Apellido1 { get; set; } = string.Empty;
         public string Apellido2 { get; set; } = string.Empty;
@@ -19,6 +20,8 @@ namespace CCIH.Entities
         public int IdRol { get; set; }
         public string Usuario { get; set; } = string.Empty;
         public string PwUsuario { get; set; } = string.Empty;
+
+        public string ConfirmarPwUsuario { get; set; } = string.Empty;
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaUltimaActividad { get; set; }
         public string NombreRol { get; set; } = string.Empty;

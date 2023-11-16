@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Esteban/source/repos/ProyectoWeb/ProyectoWeb/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Esteban/source/repos/ProyectoWeb/ProyectoWeb/Views/Home/Acerca.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2VyY2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,14 +66,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Esteban/source/repos/ProyectoWeb/ProyectoWeb/Views/Home/Portu_Semi_Intensivo_V.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3J0dV9TZW1pX0ludGVuc2l2b19WLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Esteban/source/repos/ProyectoWeb/ProyectoWeb/Views/Home/PreMatricular.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmVNYXRyaWN1bGFyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Esteban/source/repos/ProyectoWeb/ProyectoWeb/Views/Home/Registration.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Esteban/source/repos/ProyectoWeb/ProyectoWeb/Views/Login/IniciarSesion.cshtml]

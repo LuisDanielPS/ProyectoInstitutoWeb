@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cgvYmWMuuiagMgJRySaR1Hpp/w5yN4QFZiRTDFfhcOw=",
+  "Hash": "BuDb6VAIJ3ECHo1Yzld9D9H879U0p+xQVvrT/3y4e2k=",
   "Source": "ProyectoWeb",
   "BasePath": "_content/ProyectoWeb",
   "Mode": "Default",
@@ -7903,6 +7903,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Home\\img\\trainers\\trainer-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Home\\js\\ConsultarNombre.js",
+      "SourceId": "ProyectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\",
+      "BasePath": "_content/ProyectoWeb",
+      "RelativePath": "Home/js/ConsultarNombre.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Home\\js\\ConsultarNombre.js"
     },
     {
       "Identity": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Home\\js\\main.js",

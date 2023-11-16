@@ -1,4 +1,4 @@
-﻿@model CCIH.Entities.UsuarioRegistrarEnt
+﻿@model CCIH.Entities.UsuarioEnt
 
 @{
     ViewBag.Title = "Registrarse";
@@ -85,19 +85,6 @@
                                     </div>
 
                                     <div class="form-group" style="width: 450px; text-align: left">
-                                        <label>Fecha Nacimiento</label>
-                                        @Html.TextBoxFor(
-                                        m => m.FechaNacimiento,
-                                        new
-                                        {
-                                        @type = "date",
-                                        @style = "text-align: center",
-                                        @class = "form-control form-control-lg"
-                                        })
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group" style="width: 450px; text-align: left">
                                         <label>Teléfono</label>
                                         @Html.TextBoxFor(
                                         m => m.Telefono,
@@ -105,6 +92,24 @@
                                         {
                                         @type = "text",
                                         @placeholder = "Teléfono",
+                                        @style = "text-align: center",
+                                        @class = "form-control form-control-lg",
+                                        @required = "required"
+                                        })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="width: 450px; text-align: left">
+                                        <label>Cedula</label>
+                                        @Html.TextBoxFor(
+                                        m => m.Cedula,
+                                        new
+                                        {
+                                        @onkeyup = "ConsultarNombre()",
+                                        @type = "text",
+                                        @id = "Cedula",
+                                        @name = "Cedula",
+                                        @placeholder = "Cedula",
                                         @style = "text-align: center",
                                         @class = "form-control form-control-lg",
                                         @required = "required"
@@ -196,12 +201,4 @@
     <!-- End Modal-->
 }
 
-<script>
-    // Esperar 5 segundos y luego ocultar el mensaje
-    setTimeout(function () {
-        var mensajeDiv = document.getElementById('Msj');
-        mensajeDiv.style.display = 'none';
-
-    }, 5000); // 5000 milisegundos = 5 segundos
-
-</script>
+<script defer src="~/home/js/consultarnombre.js"></script>
