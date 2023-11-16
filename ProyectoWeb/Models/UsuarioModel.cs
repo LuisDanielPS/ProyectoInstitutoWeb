@@ -35,7 +35,7 @@ namespace ProyectoWeb.Models
            
         }
 
-        public int RegistrarUsuario(UsuarioRegistrarEnt entidad)
+        public int RegistrarUsuario(UsuarioEnt entidad)
         { 
             string url = _urlApi + "api/Login/RegistrarUsuario";
             JsonContent obj = JsonContent.Create(entidad);

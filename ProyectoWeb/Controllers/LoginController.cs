@@ -23,7 +23,7 @@ namespace ProyectoWeb.Controllers
         [HttpGet]
         public IActionResult IniciarSesion()
         {
-            bool registroExitoso = TempData["RegistroExitoso"] != null && (bool)TempData["RegistroExitoso"];
+            bool registroExitoso = TempData["RegistroExitoso"] as bool? ?? false;
 
             if (registroExitoso)
             {
@@ -64,12 +64,8 @@ namespace ProyectoWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult Registrarse(UsuarioRegistrarEnt entidad)
+        public IActionResult Registrarse(UsuarioEnt entidad)
         {
-            if (entidad.Correo != null && entidad.Nombre != null && entidad.Apellido1 != null && entidad.Apellido2 != null
-                 && entidad.FechaNacimiento != DateTime.MinValue && entidad.Telefono != null && entidad.Direccion != null
-                 && entidad.Usuario != null && entidad.PwUsuario != null && entidad.ConfirmarPwUsuario != null)
-            {
                 if (entidad.PwUsuario == entidad.ConfirmarPwUsuario)
                 {
                     var resp = _usuarioModel.RegistrarUsuario(entidad);
@@ -95,11 +91,7 @@ namespace ProyectoWeb.Controllers
                     ViewBag.MsjPantalla = "Las contraseñas ingresadas no coinciden, por favor verifique";
                     return View();
                 }
-            } else
-            {
-                ViewBag.MsjPantalla = "Hay campos sin completar, por favor verifique";
-                return View();
-            }
+            
         }
     }
 }

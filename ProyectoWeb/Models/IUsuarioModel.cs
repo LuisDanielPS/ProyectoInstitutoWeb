@@ -5,6 +5,6 @@ namespace ProyectoWeb.Models
     public interface IUsuarioModel
     {
         public UsuarioEnt? IniciarSesion(UsuarioEnt entidad);
-        public int RegistrarUsuario(UsuarioRegistrarEnt entidad);
+        public int RegistrarUsuario(UsuarioEnt entidad);
     }
 }

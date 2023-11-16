@@ -1,32 +1,3 @@
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.csproj.AssemblyReference.cache
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.AssemblyInfoInputs.cache
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.AssemblyInfo.cs
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.csproj.CoreCompileInputs.cache
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.RazorAssemblyInfo.cache
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.RazorAssemblyInfo.cs
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\appsettings.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.staticwebassets.runtime.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.exe
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.deps.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.runtimeconfig.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.dll
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.pdb
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.ProyectoWeb.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.build.ProyectoWeb.props
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProyectoWeb.props
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProyectoWeb.props
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\scopedcss\bundle\ProyectoWeb.styles.css
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.dll
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\refint\ProyectoWeb.dll
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.pdb
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.genruntimeconfig.cache
-C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ref\ProyectoWeb.dll
 C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\bin\Debug\net6.0\appsettings.json
 C:\Users\LENOVO\Desktop\Documentos Johan\Progra Avanzada en Web\ProyectoFinal\WEB\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.staticwebassets.runtime.json
@@ -84,3 +55,32 @@ D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\refint\Pro
 D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.pdb
 D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.genruntimeconfig.cache
 D:\Proyectos Github\ProyectoInstitutoWeb\ProyectoWeb\obj\Debug\net6.0\ref\ProyectoWeb.dll
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.csproj.AssemblyReference.cache
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.AssemblyInfoInputs.cache
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.AssemblyInfo.cs
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.csproj.CoreCompileInputs.cache
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.RazorAssemblyInfo.cache
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.RazorAssemblyInfo.cs
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\appsettings.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.staticwebassets.runtime.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.exe
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.deps.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.runtimeconfig.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.dll
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\bin\Debug\net6.0\ProyectoWeb.pdb
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.ProyectoWeb.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.build.ProyectoWeb.props
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProyectoWeb.props
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProyectoWeb.props
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\scopedcss\bundle\ProyectoWeb.styles.css
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.dll
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\refint\ProyectoWeb.dll
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.pdb
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ProyectoWeb.genruntimeconfig.cache
+C:\Users\Esteban\source\repos\ProyectoWeb\ProyectoWeb\obj\Debug\net6.0\ref\ProyectoWeb.dll
