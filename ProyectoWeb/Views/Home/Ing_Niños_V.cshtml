@@ -4,22 +4,26 @@
 
 <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
         <div class="container">
-            <h2>Ingles Intensivo Virtual</h2>
-            <p>Esta es la oportunidad de aprender inglés sin salir de tu casa, nuestra plataforma online te permitirá ingresar cuando desees y practicar a través de diferentes actividades el idioma, además recibirás seguimiento por parte de los profesores.</p>
+            <h2>Ingles Niños Virtual</h2>
+            <p>Esta es la oportunidad perfecta para que los niños aprendan inglés desde la comodidad de su hogar. 
+                Nuestra plataforma en línea les brindará la flexibilidad de ingresar cuando lo deseen y practicar el 
+                idioma a través de diversas actividades diseñadas especialmente para ellos. Además, contarán con el 
+                seguimiento constante de nuestros experimentados profesores. </p>
         </div>
-    </div><!-- End Breadcrumbs -->
-    <!-- ======= Cource Details Section ======= -->
+    </div>
     <section id="course-details" class="course-details">
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-8">
-                    <img src="~/Home/img/course-details-1.jpg" class="img-fluid" alt="">
+                    <img src="~/Home/img/course-3.jpg" class="img-fluid" alt="">
                     <h3>Ingles Intensivo Presencial</h3>
                     <p>
-                        Mediante materiales de la universidad de Oxford, aprenderás a leer, escuchar, hablar y escribir correctamente el idioma del inglés, contamos con profesores altamente experimentados para ayudarte a que manejes el idioma del inglés a la perfección.
+                        A través de los recursos educativos de la Universidad de Oxford, los niños aprenderán de manera 
+                        virtual a leer, escuchar, hablar y escribir en inglés de manera precisa. Contamos con profesores 
+                        altamente experimentados que guiarán a los niños para que dominen el idioma de manera efectiva y 
+                        divertida.
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -62,12 +66,18 @@
                         <h5>Martes y Jueves</h5>
                         <p>6.00 pm a 9.00 pm</p>
                     </div>
-                                        <button type="button" class="btn btn-success" href="@Url.Action("PreMatricular","Home")">Matricular</button>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a type="submit" class="btn btn-success" href="@Url.Action("Matricular","Home")">Matricular</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" href="@Url.Action("IniciarSesion","Login")">Matricular</a>
+                    }
                 </div>
             </div>
         </div>
-    </section><!-- End Cource Details Section -->
-    <!-- ======= Cource Details Tabs Section ======= -->
+    </section>
     <section id="cource-details-tabs" class="cource-details-tabs">
         <div class="container" data-aos="fade-up">
 
@@ -90,10 +100,17 @@
                         <div class="tab-pane active show" id="tab-1">
                             <div class="row">
                                 <div class="col-lg-8 details order-2 order-lg-1">
-                                    <p>Empleamos las series de libros Keynote, libros de texto con contenidos reales enfocados 100% al mundo profesional. En ellos se muestran charlas TED originales con lenguaje auténtico para que los estudiantes desarrollen una escucha activa y puedan expresarse sobre temas relevantes con orientación cultural en cualquier ambiente social y profesional.  Los modelos eficaces y las ideas inspiradoras potencian la comunicación y propician el aprendizaje del idioma inglés al enseñar estrategias transferibles que fomentan la fluidez, la confianza y un discurso convincente.</p>
+                                    <p>Hacemos uso del libro "200+ English Activities for Kids" de Maple Kids. 
+                                        Estos recursos están diseñados específicamente para que los niños aprendan 
+                                        inglés de manera divertida a 
+                                        través de actividades interactivas. Los contenidos del libro están enfocados 
+                                        en situaciones prácticas y lúdicas, proporcionando a los estudiantes la oportunidad 
+                                        de desarrollar habilidades lingüísticas de manera efectiva. Las actividades no solo 
+                                        fomentan la fluidez en el idioma, sino que también construyen confianza y promueven 
+                                        un discurso convincente en un entorno educativo estimulante.</p>
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                                    <img src="~/Home/img/course-details-tab-1.png" alt="" class="img-fluid">
+                                    <img src="~/Home/img/Activities4kids.jpg" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -111,10 +128,10 @@
                             <div class="row">
                                 <div class="col-lg-8 details order-2 order-lg-1">
                                     <h3>Requisitos de ingreso</h3>
-                                    <p class="fst-italic">Ser mayor de 25 años</p>
-                                    <p class="fst-italic">Profesional / graduado universitario (preferiblemente)</p>
-                                    <p class="fst-italic">Tomar la Prueba de Comprobación de Nivel (PCN)</p>
-                                    <p class="fst-italic">Tener experiencia laboral (deseable pero no indispensable)</p>
+                                    <p class="fst-italic">Tener entre 6 y 15 años de edad</p>
+                                    <p class="fst-italic">Cédula de identidad (en caso de contar con una)</p>
+                                    <p class="fst-italic">Carta de aprobación del adulto encargado</p>
+                                    <p class="fst-italic">Disposición y respeto</p>
 
                                 </div>
                                 <div class="col-lg-4 text-center order-1 order-lg-2">
@@ -129,6 +146,6 @@
             </div>
 
         </div>
-    </section><!-- End Cource Details Tabs Section -->
+    </section>
 
-</main><!-- End #main -->
+</main>

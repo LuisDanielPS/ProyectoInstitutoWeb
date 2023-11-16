@@ -63,12 +63,18 @@
                         <h5>Martes y Jueves</h5>
                         <p>6.00 pm a 9.00 pm</p>
                     </div>
-                    <button type="button" class="btn btn-success" href="@Url.Action("","")">Matricular</button>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a type="submit" class="btn btn-success" href="@Url.Action("Matricular","Home")">Matricular</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" href="@Url.Action("IniciarSesion","Login")">Matricular</a>
+                    }
                 </div>
             </div>
         </div>
-    </section><!-- End Cource Details Section -->
-    <!-- ======= Cource Details Tabs Section ======= -->
+    </section>
     <section id="cource-details-tabs" class="cource-details-tabs">
         <div class="container" data-aos="fade-up">
 
@@ -128,6 +134,6 @@
             </div>
 
         </div>
-    </section><!-- End Cource Details Tabs Section -->
+    </section>
 
-</main><!-- End #main -->
+</main>

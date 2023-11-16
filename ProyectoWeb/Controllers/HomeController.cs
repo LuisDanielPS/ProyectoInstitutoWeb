@@ -79,7 +79,7 @@ namespace ProyectoWeb.Controllers
             return View();
         }
 
-        public IActionResult PreMatricular()
+        public IActionResult PreMatricula()
         {
             return View();
         }

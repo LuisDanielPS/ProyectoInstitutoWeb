@@ -4,14 +4,12 @@
 
 <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
         <div class="container">
             <h2>Ingles Intensivo Virtual</h2>
             <p>Esta es la oportunidad de aprender inglés sin salir de tu casa, nuestra plataforma online te permitirá ingresar cuando desees y practicar a través de diferentes actividades el idioma, además recibirás seguimiento por parte de los profesores.</p>
         </div>
-    </div><!-- End Breadcrumbs -->
-    <!-- ======= Cource Details Section ======= -->
+    </div>
     <section id="course-details" class="course-details">
         <div class="container" data-aos="fade-up">
             <div class="row">
@@ -62,12 +60,18 @@
                         <h5>Martes y Jueves</h5>
                         <p>6.00 pm a 9.00 pm</p>
                     </div>
-                      <a type="submit" class="btn btn-success" href="@Url.Action("PreMatricular","Home")">Matricular</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a type="submit" class="btn btn-success" href="@Url.Action("Matricular","Home")">Matricular</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" href="@Url.Action("IniciarSesion","Login")">Matricular</a>
+                    }
                 </div>
             </div>
         </div>
-    </section><!-- End Cource Details Section -->
-    <!-- ======= Cource Details Tabs Section ======= -->
+    </section>
     <section id="cource-details-tabs" class="cource-details-tabs">
         <div class="container" data-aos="fade-up">
 
@@ -129,6 +133,6 @@
             </div>
 
         </div>
-    </section><!-- End Cource Details Tabs Section -->
+    </section>
 
-</main><!-- End #main -->
+</main>

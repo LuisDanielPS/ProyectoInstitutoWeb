@@ -1,0 +1,72 @@
+@model ProyectoWeb.Entities.PreMatriculaEnt
+
+@{
+    ViewBag.Title = "Inicio";
+}
+
+<main id="main">
+
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Ingles Intensivo Presencial</h2>
+            <p>Mediante materiales de la universidad de Oxford, aprenderás a leer, escuchar, hablar y escribir correctamente el idioma del inglés, contamos con profesores altamente experimentados para ayudarte a que manejes el idioma del inglés a la perfección. </p>
+        </div>
+    </div>
+
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                @using (Html.BeginForm("PreMatricular", "Home", FormMethod.Post, new { @class = "pt-3" }))
+                {
+                    @ViewBag.MensajePantalla
+
+                    @Html.HiddenFor(m => m.IdPrematricula)
+
+                    <div class="container">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="CorreoElectronico">Correo Electrónico</label>
+                                        @Html.TextBoxFor(m => m.CorreoElectronico, new { @class="form-control", @type="email", @placeholder="Correo Electrónico" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="Telefono">Teléfono</label>
+                                        @Html.TextBoxFor(m => m.Telefono, new { @class="form-control", @type="text", @placeholder="Teléfono" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="Nombre">Nombre</label>
+                                        @Html.TextBoxFor(m => m.Nombre, new { @class="form-control", @type="text", @placeholder="Nombre" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="Apellido1">Primer Apellido</label>
+                                        @Html.TextBoxFor(m => m.Apellido1, new { @class="form-control", @type="text", @placeholder="Primer Apellido" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="Apellido2">Segundo Apellido</label>
+                                        @Html.TextBoxFor(m => m.Apellido2, new { @class="form-control", @type="text", @placeholder="Segundo Apellido" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Procesar</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</main>
