@@ -46,5 +46,66 @@ namespace ProyectoWeb.Models
             else
                 return 0;
         }
+
+        public List<UsuarioEnt>? ListaUsuarios()
+        {
+            string url = _urlApi + "api/Usuario/ListaUsuarios";
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<List<UsuarioEnt>>().Result;
+            else
+                return null;
+        }
+
+		public int ActualizarEstadoUsuario(long idUsuario)
+		{
+            var usuario = new UsuarioEnt();
+            usuario.IdUsuario = idUsuario;
+			string url = _urlApi + "api/Usuario/ActualizarEstadoUsuario";
+			JsonContent obj = JsonContent.Create(usuario);
+			var resp = _httpClient.PutAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return 1;
+            else
+                return 0;
+        }
+
+        public int ActualizarRolUsuario(UsuarioEnt usuario)
+        {
+            string url = _urlApi + "api/Usuario/ActualizarRolUsuario";
+            JsonContent obj = JsonContent.Create(usuario);
+            var resp = _httpClient.PutAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return 1;
+            else
+                return 0;
+        }
+
+        public UsuarioEnt? ConsultarUsuario(long idUsuario)
+        {
+            string url = _urlApi + "api/Usuario/ConsultarUsuario?idUsuario=" + idUsuario;
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<UsuarioEnt>().Result;
+            else
+                return null;
+        }
+
+        public List<SelectListItem>? ConsultarRoles()
+        {
+            string url = _urlApi + "api/Usuario/ConsultarRoles";
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<List<SelectListItem>>().Result;
+            else
+                return null;
+        }
+
+
     }
 }

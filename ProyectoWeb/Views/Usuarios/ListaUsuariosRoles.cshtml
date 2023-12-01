@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CCIH.Entities.UsuarioEnt>
+
+@{
+    ViewData["Title"] = "Lista de Usuarios";
+    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+}
+
+<h1 class="titulo">Lista de Usuarios</h1>
+
+<div style="padding: 50px;">
+    <div class="card" style="padding-top: 25px;">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre completo</th>
+                        <th>Rol</th>
+                        <th style="text-align: center;">Actualizar rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
+                            <td>@item.NombreRol</td>
+                            <td style="text-align: center;"><a href="@Url.Action("ActualizarRolUsuario","Usuarios", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-pencil-fill"></span></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

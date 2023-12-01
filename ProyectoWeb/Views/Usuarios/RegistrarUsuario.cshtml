@@ -1,0 +1,180 @@
+﻿@model CCIH.Entities.UsuarioEnt
+
+@{
+    ViewBag.Title = "RegistrarUsuario";
+    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+}
+@using (Html.BeginForm("RegistrarUsuario", "Usuarios", FormMethod.Post))
+{
+
+<section id="hero">
+    <div class="container position-relative">
+        <div class="row justify-content-center align-items-center h-1">
+            <div class="col-12 col-md-8 col-lg-12 col-xl-5" style="width: 100%">
+                <div class="card-body p-2 text-center" style="position: relative;">
+
+
+                    <div class="mb-md-5 mt-md-4 pb-1" style="padding-top: 100px;">
+                        <h2 class="fw-bold text-uppercase" style="color: black">Registrar Usuario</h2>
+
+                        @if (ViewBag.MsjPantalla != null)
+                        {
+                            <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-danger" role="alert">
+                                @ViewBag.MsjPantalla
+                            </div>
+                        }
+
+                        <div class="row" style="text-align:center; position:center;">
+                            <div class="col-md-12">
+                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
+                                    <label>Correo electrónico</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Correo,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Correo Electronico",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align:left; margin-top: 25px;">
+                                    <label>Nombre</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Nombre,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Nombre",
+                                    @id = "nombre",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                    <label>Primer Apellido</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Apellido1,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Primer Apellido",
+                                    @id = "pApellido",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                    <label>Segundo Apellido</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Apellido2,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Segundo Apellido",
+                                    @id = "sApellido",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                    <label>Teléfono</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Telefono,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Teléfono",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+                                <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                    <label>Cedula</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Cedula,
+                                    new
+                                    {
+                                    @onkeyup = "ConsultPeopleInfo()",
+                                    @type = "text",
+                                    @placeholder = "Cedula",
+                                    @id = "PersonalId",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                    <label>Dirección</label>
+                                    @Html.TextBoxFor(
+                                    m => m.Direccion,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Dirección",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                    <label>Contraseña</label>
+                                    @Html.TextBoxFor(
+                                    m => m.PwUsuario,
+                                    new
+                                    {
+                                    @type = "password",
+                                    @placeholder = "Contraseña",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Confirmar Contraseña</label>
+                                    @Html.TextBoxFor(
+                                    m => m.ConfirmarPwUsuario,
+                                    new
+                                    {
+                                    @type = "password",
+                                    @placeholder = "Confirmar Contraseña",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                </div>
+
+
+                                    <button type="submit" class="btn btn-outline-success btn-lg px-5" style="margin-top: 5%;">
+                                        Guardar
+                                    </button>
+                                    @* <a type="button" href="@Url.Action("Index","Amin")" class="btn btn-outline-danger btn-lg px-5" style="margin-top: 5%;">
+                                        Regresar
+                                    </a> *@
+                                <br>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}

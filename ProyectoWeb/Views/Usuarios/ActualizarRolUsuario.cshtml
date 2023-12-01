@@ -1,0 +1,36 @@
+﻿@model CCIH.Entities.UsuarioEnt
+
+@{
+    ViewData["Title"] = "ActualizarRolUsuario";
+    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+}
+
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Información General</h4>
+
+            @using (Html.BeginForm("ActualizarRolUsuario", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
+            {
+                @ViewBag.MensajePantalla
+
+                @Html.HiddenFor(m => m.IdUsuario)
+
+                <div class="form-group">
+                    <label>Nombre</label>
+                    @Html.TextBoxFor(m => m.Nombre, new { @readOnly="readOnly", @class="form-control form-control-lg", @type="text", @placeholder="Identificación" })
+                </div>
+
+                <div class="form-group" style="margin-top: 25px;">
+                    <label>Rol</label>
+                    @Html.DropDownListFor(m => m.IdRol, ViewBag.Roles as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                </div>
+                <div style="margin-top: 25px;">
+
+                    <button type="submit" class="btn btn-primary mr-2">Procesar</button>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
