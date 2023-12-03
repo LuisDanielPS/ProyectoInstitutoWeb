@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CCIH.Entities.UsuariosMatriculadosEnt>
+
+@{
+    ViewData["Title"] = "Lista de Usuarios Matriculados";
+    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+}
+
+<h1 class="titulo">Lista de Usuarios Matriculados</h1>
+
+<div style="padding: 50px;">
+    <div class="card" style="padding-top: 25px;">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Nombre completo</th>
+                        <th>Cedula</th>
+                        <th>FechaMatricula</th>
+                        <th>Próximo pago</th>
+                        <th>Curso</th>
+                        <th>Modalidad</th>
+                        <th>Nivel</th>
+                        <th>Horario</th>
+                        @* <th style="text-align: center;">Inactivar</th> *@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Usuario</td>
+                            <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
+                            <td>@item.Cedula</td>
+                            <td>@item.FechaMatricula</td>
+                            <td>@item.DiaPago</td>
+                            <td>@item.Curso</td>
+                            <td>@item.Modalidad</td>
+                            <td>@item.Nivel</td>
+                            <td>@item.Horario</td>
+                            @* <td style="text-align: center;"><a href="@Url.Action("ActualizarEstadoUsuario","Usuarios", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-trash-fill"></span></a></td> *@
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

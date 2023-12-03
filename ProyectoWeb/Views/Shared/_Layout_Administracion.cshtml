@@ -118,21 +118,21 @@
                     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
                         <li>
-                            <a href="@Url.Action("","")">
+                        <a href="@Url.Action("ConsultarClientes","Matricula")">
                                 <i class="bi bi-circle"></i><span>Clientes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/Cliente">
-                                <i class="bi bi-circle"></i><span>Nueva</span>
+                        <a href="@Url.Action("RegistrarMatricula","Matricula")">
+                                <i class="bi bi-circle"></i><span>Nueva Matrícula</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/Administracion/ConsultarMatriculas">
+                        <a href="@Url.Action("ConsultarUsuariosMatriculados","Matricula")">
                                 <i class="bi bi-circle"></i><span>Consultar</span>
                             </a>
                         </li>
-                        <li>
+                        @* <li>
                             <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>PreMatriculas</span>
                             </a>
@@ -141,7 +141,7 @@
                             <a href="@Url.Action("","")">
                                 <i class="bi bi-circle"></i><span>Libros</span>
                             </a>
-                        </li>
+                        </li> *@
 
                     </ul>
                 </li><!-- End Matriculas Nav -->

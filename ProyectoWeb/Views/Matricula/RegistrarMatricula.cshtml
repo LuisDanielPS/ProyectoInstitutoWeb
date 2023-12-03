@@ -1,0 +1,115 @@
+﻿@model CCIH.Entities.MatriculaEnt
+
+@{
+    ViewBag.Title = "RegistrarMatricula";
+    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+}
+@using (Html.BeginForm("RegistrarMatricula", "Matricula", FormMethod.Post))
+{
+
+    <section id="hero">
+        <div class="container position-relative">
+            <div class="row justify-content-center align-items-center h-1">
+                <div class="col-12 col-md-8 col-lg-12 col-xl-5" style="width: 100%">
+                    <div class="card-body p-2 text-center" style="position: relative;">
+
+
+                        <div class="mb-md-5 mt-md-4 pb-1" style="padding-top: 100px;">
+                            <h2 class="fw-bold text-uppercase" style="color: black">Registro de Matrícula</h2>
+
+                            @if (ViewBag.MsjPantalla != null)
+                            {
+                                <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-danger" role="alert">
+                                    @ViewBag.MsjPantalla
+                                </div>
+                            }
+
+                            <div class="row" style="text-align:center; position:center;">
+                                <div class="col-md-12">
+                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
+                                        <div class="form-group" style="margin-top: 25px;">
+                                            <label>Usuario que matricula</label>
+                                            @Html.DropDownListFor(m => m.IdUsuario, ViewBag.Usuarios as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
+                                        <div class="form-group" style="margin-top: 25px;">
+                                            <label>Curso</label>
+                                            @Html.DropDownListFor(m => m.IdCurso, ViewBag.Cursos as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
+                                        <div class="form-group" style="margin-top: 25px;">
+                                            <label>Modalidad</label>
+                                            @Html.DropDownListFor(m => m.IdModalidad, ViewBag.Modalidades as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
+                                        <div class="form-group" style="margin-top: 25px;">
+                                            <label>Nivel</label>
+                                            @Html.DropDownListFor(m => m.IdNivel, ViewBag.Niveles as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
+                                        <div class="form-group" style="margin-top: 25px;">
+                                            <label>Horario</label>
+                                            @Html.DropDownListFor(m => m.IdHorario, ViewBag.Horarios as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="text-align:left; margin-top: 25px;">
+                                        <label>Monto</label>
+                                        @Html.TextBoxFor(
+                                    m => m.Monto,
+                                    new
+                                    {
+                                    @type = "Number",
+                                    @placeholder = "Monto",
+                                    @id = "monto",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                    </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Comentario</label>
+                                        @Html.TextBoxFor(
+                                    m => m.Comentario,
+                                    new
+                                    {
+                                    @type = "text",
+                                    @placeholder = "Comentario",
+                                    @id = "comentario",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-outline-success btn-lg px-5" style="margin-top: 5%;">
+                                        Guardar
+                                    </button>
+                                    @* <a type="button" href="@Url.Action("Index","Amin")" class="btn btn-outline-danger btn-lg px-5" style="margin-top: 5%;">
+                                Regresar
+                                </a> *@
+                                    <br>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
