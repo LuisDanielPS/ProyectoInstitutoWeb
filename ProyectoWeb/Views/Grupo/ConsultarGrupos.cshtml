@@ -16,6 +16,7 @@
                         <th>Descripción</th>
                         <th>Curso</th>
                         <th style="text-align: center;">Agregar Estudiantes</th>
+                        <th style="text-align: center;">Ver Grupo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,7 +25,8 @@
                         <tr>
                             <td>@item.Descripcion</td>
                             <td>@item.NombreCurso</td>
-                            <td style="text-align: center;"><a href="@Url.Action("UsuariosPorCursoMatriculado","Grupo", new { idCurso = item.IdCurso })"><span style="color: #000;" class="bi bi-plus"></span></a></td>
+                            <td style="text-align: center;"><a href="@Url.Action("UsuariosPorCursoMatriculado","Grupo", new { IdCurso = item.IdCurso, IdGrupo = item.IdGrupo })"><span style="color: #000;" class="bi bi-plus"></span></a></td>
+                            <td style="text-align: center;"><a href="@Url.Action("UsuariosPorGrupo","Grupo", new { IdGrupo = item.IdGrupo })"><span style="color: #000;" class="bi bi-eye"></span></a></td>
                         </tr>
                     }
                 </tbody>

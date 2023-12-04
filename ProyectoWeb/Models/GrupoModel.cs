@@ -1,4 +1,5 @@
 ﻿using CCIH.Entities;
+using System.Text;
 
 namespace ProyectoWeb.Models
 {
@@ -29,11 +30,13 @@ namespace ProyectoWeb.Models
                 return 0;
         }
 
-        public int RegistrarEstudianteGrupo(GrupoEstudiantesEnt entidad)
+        public int RegistrarEstudianteGrupo(long IdUsuario, long IdGrupo)
         {
-            string url = _urlApi + "api/Grupo/RegistrarEstudianteGrupo";
-            JsonContent obj = JsonContent.Create(entidad);
-            var resp = _httpClient.PostAsync(url, obj).Result;
+            string url = _urlApi + "api/Grupo/RegistrarEstudianteGrupo?IdUsuario=" + IdUsuario + "&IdGrupo=" + IdGrupo;
+            string jsonData = $"{{\"IdUsuario\": {IdUsuario}, \"IdGrupo\": {IdGrupo}}}";
+            var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+            var resp = _httpClient.PostAsync(url, content).Result;
 
             if (resp.IsSuccessStatusCode)
                 return resp.Content.ReadFromJsonAsync<int>().Result;
@@ -44,6 +47,17 @@ namespace ProyectoWeb.Models
         public List<UsuarioEnt>? UsuariosPorCursoMatriculado(long idCurso)
         {
             string url = _urlApi + "api/Grupo/UsuariosPorCursoMatriculado?idCurso=" + idCurso;
+            var resp = _httpClient.GetAsync(url).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<List<UsuarioEnt>>().Result;
+            else
+                return null;
+        }
+
+        public List<UsuarioEnt>? UsuariosPorGrupo(long idGrupo)
+        {
+            string url = _urlApi + "api/Grupo/UsuariosPorGrupo?idGrupo=" + idGrupo;
             var resp = _httpClient.GetAsync(url).Result;
 
             if (resp.IsSuccessStatusCode)

@@ -1,4 +1,5 @@
 ﻿using CCIH.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoWeb.Models;
 
@@ -48,17 +49,35 @@ namespace ProyectoWeb.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult RegistrarEstudianteGrupo(GrupoEstudiantesEnt entidad)
+        [HttpGet]
+        public IActionResult RegistrarEstudianteGrupo(long IdUsuario)
         {
-            _grupoModel.RegistrarEstudianteGrupo(entidad);
-            ViewBag.Cursos = _matriculaModel.ConsultarCursos();
-            return RedirectToAction("RegistrarGrupo", "Grupo");
+            var IdGrupoI = HttpContext.Session.GetInt32("IdGrupo");
+            long IdGrupo = (long)IdGrupoI;
+            var resp = _grupoModel.RegistrarEstudianteGrupo(IdUsuario, IdGrupo);
+
+            if (resp == 150)
+            {
+                ViewBag.MsjPantalla = "El usuario ya se encuentra asignado al grupo indicado";
+                return RedirectToAction("UsuariosPorGrupo", new { IdGrupo = IdGrupo });
+            }
+            else
+            {
+                ViewBag.Cursos = _matriculaModel.ConsultarCursos();
+                return RedirectToAction("UsuariosPorGrupo", new { IdGrupo = IdGrupo });
+            }
         }
 
-        public IActionResult UsuariosPorCursoMatriculado(long IdCurso)
+        public IActionResult UsuariosPorCursoMatriculado(long IdCurso, int IdGrupo)
         {
+            HttpContext.Session.SetInt32("IdGrupo", IdGrupo);
             var datos = _grupoModel.UsuariosPorCursoMatriculado(IdCurso);
+            return View(datos);
+        }
+
+        public IActionResult UsuariosPorGrupo(int IdGrupo)
+        {
+            var datos = _grupoModel.UsuariosPorGrupo(IdGrupo);
             return View(datos);
         }
 

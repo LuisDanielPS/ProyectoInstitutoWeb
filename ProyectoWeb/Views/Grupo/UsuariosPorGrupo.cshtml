@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CCIH.Entities.UsuarioEnt>
+
+@{
+    ViewData["Title"] = "Lista de Estudiantes por Grupo";
+    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+}
+
+<h1 class="titulo">Lista de Estudiantes por Grupo</h1>
+
+<div style="padding: 50px;">
+
+    @if (ViewBag.MsjPantalla != null)
+    {
+        <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-danger" role="alert">
+            @ViewBag.MsjPantalla
+        </div>
+    }
+
+    <div class="card" style="padding-top: 25px;">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Nombre completo</th>
+                        <th>Cedula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Usuario</td>
+                            <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
+                            <td>@item.Cedula</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
