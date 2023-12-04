@@ -22,7 +22,7 @@
                         <th>Modalidad</th>
                         <th>Nivel</th>
                         <th>Horario</th>
-                        @* <th style="text-align: center;">Inactivar</th> *@
+                        <th style="text-align: center;">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,7 @@
                             <td>@item.Modalidad</td>
                             <td>@item.Nivel</td>
                             <td>@item.Horario</td>
-                            @* <td style="text-align: center;"><a href="@Url.Action("ActualizarEstadoUsuario","Usuarios", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-trash-fill"></span></a></td> *@
+                            <td style="text-align: center;"><a href="@Url.Action("EliminarMatriculaPorUsuario","Matricula", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-trash-fill"></span></a></td>
                         </tr>
                     }
                 </tbody>

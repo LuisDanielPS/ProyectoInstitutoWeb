@@ -80,5 +80,12 @@ namespace ProyectoWeb.Controllers
             return View(datos);
         }
 
+        [HttpGet]
+        public IActionResult EliminarMatriculaPorUsuario(long IdUsuario)
+        {
+            var resp = _matriculaModel.EliminarMatriculaPorUsuario(IdUsuario);
+            return RedirectToAction("ConsultarUsuariosMatriculados", "Matricula");
+        }
+
     }
 }

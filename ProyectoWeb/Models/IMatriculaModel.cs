@@ -13,5 +13,6 @@ namespace ProyectoWeb.Models
         public List<SelectListItem>? ConsultarUsuariosPorRol();
         public List<UsuarioEnt>? ConsultarClientes();
         public List<UsuariosMatriculadosEnt>? ConsultarUsuariosMatriculados();
+        public int EliminarMatriculaPorUsuario(long IdUsuario);
     }
 }

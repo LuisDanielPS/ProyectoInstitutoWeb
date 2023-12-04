@@ -107,5 +107,19 @@ namespace ProyectoWeb.Models
                 return null;
         }
 
+        public int EliminarMatriculaPorUsuario(long IdUsuario)
+        {
+            UsuariosMatriculadosEnt usuario = new UsuariosMatriculadosEnt();
+            usuario.IdUsuario = IdUsuario;
+            string url = _urlApi + "api/Matricula/EliminarMatriculaPorUsuario";
+            JsonContent obj = JsonContent.Create(usuario);
+            var resp = _httpClient.PutAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return 1;
+            else
+                return 0;
+        }
+
     }
 }

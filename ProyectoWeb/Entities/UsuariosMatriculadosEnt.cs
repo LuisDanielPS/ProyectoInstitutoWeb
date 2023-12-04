@@ -7,6 +7,7 @@ namespace CCIH.Entities
 {
     public class UsuariosMatriculadosEnt
     {
+        public long IdUsuario { get; set; }
         public string Usuario { get; set; } = string.Empty;
         public string Nombre { get; set; } = string.Empty;
         public string Apellido1 { get; set; } = string.Empty;
