@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\Documentos Johan\\Progra Avanzada en Web\\ProyectoFinal\\WEB\\ProyectoWeb\\ProyectoWeb.csproj": {}
+    "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\ProyectoWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\Documentos Johan\\Progra Avanzada en Web\\ProyectoFinal\\WEB\\ProyectoWeb\\ProyectoWeb.csproj": {
+    "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\ProyectoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Documentos Johan\\Progra Avanzada en Web\\ProyectoFinal\\WEB\\ProyectoWeb\\ProyectoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
         "projectName": "ProyectoWeb",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\Documentos Johan\\Progra Avanzada en Web\\ProyectoFinal\\WEB\\ProyectoWeb\\ProyectoWeb.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\Documentos Johan\\Progra Avanzada en Web\\ProyectoFinal\\WEB\\ProyectoWeb\\obj\\",
+        "projectPath": "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
+        "packagesPath": "C:\\Users\\cr787\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\cr787\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
