@@ -1,5 +1,4 @@
 ﻿using CCIH.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -11,47 +10,44 @@ namespace ProyectoWeb.Models
     public class ProfesorModel : IProfesorModel
     {
         private readonly HttpClient _httpClient;
-        private readonly IConfiguration _configuration;
         private readonly string _urlApi;
 
         public ProfesorModel(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _configuration = configuration;
-            _urlApi = _configuration.GetValue<string>("Llaves:urlApi");
+            _urlApi = configuration.GetValue<string>("Llaves:urlApi");
         }
 
-        public int RegistrarProfesor(ProfesorEnt profesor)
+        public async Task<int> RegistrarProfesorAsync(ProfesorEnt profesor)
         {
-            var response = _httpClient.PostAsJsonAsync($"{_urlApi}/api/Profesor", profesor).Result;
+            var response = await _httpClient.PostAsJsonAsync($"{_urlApi}/RegistrarProfesor", profesor);
             return response.IsSuccessStatusCode ? 1 : 0;
         }
 
-        public List<ProfesorEnt> ListarProfesores()
+        public async Task<List<ProfesorEnt>> ListarProfesoresAsync()
         {
-            var response = _httpClient.GetFromJsonAsync<List<ProfesorEnt>>($"{_urlApi}/api/Profesor").Result;
+            var response = await _httpClient.GetFromJsonAsync<List<ProfesorEnt>>($"{_urlApi}/ListarProfesores");
             return response ?? new List<ProfesorEnt>();
         }
 
-        public ProfesorEnt ConsultarProfesor(long idProfesor)
+        public async Task<ProfesorEnt> ConsultarProfesorAsync(long idProfesor)
         {
-            var response = _httpClient.GetFromJsonAsync<ProfesorEnt>($"{_urlApi}/api/Profesor/{idProfesor}").Result;
+            var response = await _httpClient.GetFromJsonAsync<ProfesorEnt>($"{_urlApi}/ConsultarProfesor/{idProfesor}");
             return response;
         }
 
-        public int ActualizarProfesor(ProfesorEnt profesor)
+        public async Task<int> ActualizarProfesorAsync(ProfesorEnt profesor)
         {
-            var response = _httpClient.PutAsJsonAsync($"{_urlApi}/api/Profesor/{profesor.IdProfesor}", profesor).Result;
+            var response = await _httpClient.PutAsJsonAsync($"{_urlApi}/ActualizarProfesor/{profesor.IdProfesor}", profesor);
             return response.IsSuccessStatusCode ? 1 : 0;
         }
 
-        public int CambiarEstadoProfesor(long idProfesor, bool nuevoEstado)
+        public async Task<int> CambiarEstadoProfesorAsync(long idProfesor, bool nuevoEstado)
         {
-            // Aquí necesitarás un poco más de lógica para enviar el estado correcto en la solicitud,
-            // dependiendo de cómo esté implementado tu endpoint de la API para cambiar el estado.
-            var response = _httpClient.PutAsJsonAsync($"{_urlApi}/api/Profesor/CambiarEstado/{idProfesor}", nuevoEstado).Result;
+            var response = await _httpClient.PutAsJsonAsync($"{_urlApi}/CambiarEstadoProfesor/{idProfesor}", nuevoEstado);
             return response.IsSuccessStatusCode ? 1 : 0;
         }
     }
 }
+
 
