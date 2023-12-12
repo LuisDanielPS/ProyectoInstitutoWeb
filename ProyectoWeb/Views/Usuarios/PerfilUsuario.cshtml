@@ -1,0 +1,291 @@
+﻿@model CCIH.Entities.UsuarioEnt
+
+@{
+    ViewBag.Title = "Perfil";
+    Layout = "~/Views/Shared/_Layout_Administracion.cshtml";
+}
+
+<main id="main" class="main">
+    @using (Html.BeginForm("PerfilUsuario", "Usuarios", FormMethod.Post, new { id = "FormForm" }))
+    {
+    <div class="pagetitle">
+        <h1>Peril Usuario</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Inicio</a></li>
+                <li class="breadcrumb-item">Usuario</li>
+                <li class="breadcrumb-item active">Mi Perfil</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        
+                            
+
+                            <div id="dovform2columnas" class="row" style="text-align:center; position:center;">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <br/>
+                                        <br />
+                                        <br />
+                                        @if (ViewBag.MensageExitoso != null)
+                                        {
+                                            <div id="Msj" style="text-align:center;" class="alert alert-success" role="alert">
+                                                @ViewBag.MensageExitoso
+                                            </div>
+                                        }
+                                        else if (ViewBag.MensageError != null)
+                                        {
+                                            <div id="Msj" style="text-align:center;" class="alert alert-danger" role="alert">
+                                                @ViewBag.MensageError
+                                            </div>
+                                        }
+                                        <div class="col-md-6">
+
+                                            @Html.HiddenFor(m => m.IdUsuario)
+
+                                            <div class="form-group" style="text-align: left; ">
+                                                <label>Cedula</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Cedula,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Cedula",
+                                            @id = "PersonalId",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+                                            <div class="form-group" style="text-align: left; ">
+                                                <label>Primer Apellido</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Apellido1,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Primer Apellido",
+                                            @id = "pApellido",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+                                            <div class="form-group " style="text-align: left; ">
+                                                <label>Correo electrónico</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Correo,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Correo Electronico",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+                                            <div class="form-group" style="text-align: left; ">
+                                                <label>Dirección</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Direccion,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Dirección",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="form-group" style="text-align:left; ">
+                                                <label>Nombre</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Nombre,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Nombre",
+                                            @id = "nombre",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+
+                                            
+
+                                            <div class="form-group" style="text-align: left; ">
+                                                <label>Segundo Apellido</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Apellido2,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Segundo Apellido",
+                                            @id = "sApellido",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+                                            <div class="form-group" style="text-align: left; ">
+                                                <label>Teléfono</label>
+                                                @Html.TextBoxFor(
+                                            m => m.Telefono,
+                                            new
+                                            {
+                                            @type = "text",
+                                            @placeholder = "Teléfono",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+
+                                            <div class="form-group" style="text-align:left; ">
+                                                <label>Rol</label>
+                                                @Html.DropDownListFor(m => m.IdRol, ViewBag.RolesCombo as List<SelectListItem>, new { @class="form-control form-control-lg" })
+
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
+
+
+                                    <div class="row">
+                                    <br />
+                                        <div class="col-lg-6 order-lg-2">
+                                    <button type="button" id="FormButton" class="btn btn-outline-primary btn-lg px-5">Actualizar</button>
+                                        </div>
+                                        <div class="col-lg-6 order-lg-1">
+                                            <button type="button" class="btn btn-secondary btn-lg px-5" onclick="window.history.back();">Regresar</button>
+                                        </div>
+                                    </div>
+                                    <br>
+
+
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- successModal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+            <div class="modal-content justify-content-center align-items-center">
+                <div class="modal-header align-items-center">
+                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-award-fill text-success"></i>  Alerta  <i class="bi bi-award-fill text-success"></i></h5>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    ¿Desea modificar la informacion del usuario?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal-->
+    <!-- errorModal -->
+    <div class="modal fade" id="errorModal" tabindex="-1">
+        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+            <div class="modal-content justify-content-center align-items-center">
+                <div class="modal-header align-items-center">
+                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-x-octagon text-danger"></i>  Alerta  <i class="bi bi-x-octagon text-danger"></i></h5>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    Por favor llene todos los campos resaltados en rojo
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal-->
+                        }
+</main><!-- End #main -->
+
+<script>
+
+
+    // Esperar 5 segundos y luego ocultar el mensaje
+    setTimeout(function () {
+        var mensajeDiv = document.getElementById('Msj');
+        if (mensajeDiv != null) {
+            mensajeDiv.style.display = 'none';
+        }
+
+    }, 5000); // 5000 milisegundos = 5 segundos
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var FormValidation = document.getElementById("FormForm");
+        var FormButtonValidation = document.getElementById("FormButton");
+
+        FormButtonValidation.addEventListener("click", function (event) {
+            event.preventDefault(); // Evitar el envío automático del formulario
+
+            if (isFormValid(FormValidation)) {
+                // Si el formulario es válido, muestra el modal de éxito
+                $("#successModal").modal("show");
+            } else {
+                emptyfields(FormValidation);
+                $("#errorModal").modal("show");
+
+            }
+        });
+
+        function isFormValid(form) {
+            // Valida si todos los campos del formulario están llenos
+            var formInputs = form.querySelectorAll("input, textarea, select");
+            for (var i = 0; i < formInputs.length; i++) {
+                if (formInputs[i].value.trim() === "") {
+                    return false; // El formulario no está completo
+                } else {
+                    formInputs[i].style.borderColor = "Green";
+                }
+            }
+            return true; // El formulario está completo
+        }
+
+        function emptyfields(form) {
+            // Valida si todos los campos del formulario están llenos
+            var formInputs = form.querySelectorAll("input, textarea, select");
+            for (var i = 0; i < formInputs.length; i++) {
+                if (formInputs[i].value.trim() === "") {
+                    formInputs[i].style.borderColor = "FireBrick";
+                } else {
+                    formInputs[i].style.borderColor = "Green";
+                }
+            }
+            return true; // El formulario está completo
+        }
+    });
+
+
+</script>

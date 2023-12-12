@@ -23,14 +23,23 @@ namespace ProyectoWeb.Controllers
         [HttpGet]
         public IActionResult IniciarSesion()
         {
-            bool registroExitoso = TempData["RegistroExitoso"] as bool? ?? false;
-
-            if (registroExitoso)
+            try
             {
-                ViewBag.RegistroExitoso = "Registro Exitoso";
-                TempData.Remove("RegistroExitoso");
+                bool registroExitoso = TempData["RegistroExitoso"] as bool? ?? false;
+
+                if (registroExitoso)
+                {
+                    ViewBag.RegistroExitoso = "Registro Exitoso";
+                    TempData.Remove("RegistroExitoso");
+                }
+                return View();
             }
-            return View();
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+           
         }
 
         [HttpGet]
@@ -42,30 +51,42 @@ namespace ProyectoWeb.Controllers
         [HttpPost]
         public IActionResult IniciarSesion(UsuarioEnt entidad)
         {
-           
-            if (entidad.Usuario != null && entidad.PwUsuario != null)
+            try
             {
-                var resp = _usuarioModel.IniciarSesion(entidad);
-                if (resp != null)
+                if (entidad.Usuario != null && entidad.PwUsuario != null)
                 {
-                    HttpContext.Session.SetString("NombreUsuario", resp.Nombre);
-                    return RedirectToAction("Index", "Admin");
+                    var resp = _usuarioModel.IniciarSesion(entidad);
+                    if (resp != null)
+                    {
+                        HttpContext.Session.SetString("NombreUsuario", resp.Nombre);
+                        HttpContext.Session.SetString("IdUsuario", resp.IdUsuario.ToString());
+                        return RedirectToAction("Index", "Admin");
+                    }
+                    else
+                    {
+                        ViewBag.MsjPantalla = "Usuario y/o clave incorrectos, por favor verifique";
+                        return View();
+                    }
                 }
                 else
                 {
-                    ViewBag.MsjPantalla = "Usuario y/o clave incorrectos, por favor verifique";
+                    ViewBag.MsjPantalla = "Por favor, digite su usuario y contraseña";
                     return View();
                 }
-            } else
-            {
-                ViewBag.MsjPantalla = "Por favor, digite su usuario y contraseña";
-                return View();
             }
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+            
         }
 
         [HttpPost]
         public IActionResult Registrarse(UsuarioEnt entidad)
         {
+            try
+            {
                 if (entidad.PwUsuario == entidad.ConfirmarPwUsuario)
                 {
                     var resp = _usuarioModel.RegistrarUsuario(entidad);
@@ -91,6 +112,13 @@ namespace ProyectoWeb.Controllers
                     ViewBag.MsjPantalla = "Las contraseñas ingresadas no coinciden, por favor verifique";
                     return View();
                 }
+            }
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+            
             
         }
     }

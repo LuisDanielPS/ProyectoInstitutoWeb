@@ -16,8 +16,8 @@ namespace CCIH.Entities
         public DateTime FechaNacimiento { get; set; }
         public string Telefono { get; set; } = string.Empty;
         public string Direccion { get; set; } = string.Empty;
-        public int IdEstatus { get; set; }
-        public int IdRol { get; set; }
+        public long IdEstatus { get; set; }
+        public long IdRol { get; set; }
         public string Usuario { get; set; } = string.Empty;
         public string PwUsuario { get; set; } = string.Empty;
 

@@ -7,7 +7,14 @@ namespace ProyectoWeb.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            try {
+                return View();
+            }
+            catch (Exception ex) { 
+                String message = ex.Message;
+                return RedirectToAction("HomeError","Error");
+            }
+            
         }
 
 

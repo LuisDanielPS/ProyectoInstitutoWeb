@@ -9613,19 +9613,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cr787\\.nuget\\packages\\": {}
+    "C:\\Users\\Esteban\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
       "projectName": "ProyectoWeb",
-      "projectPath": "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
-      "packagesPath": "C:\\Users\\cr787\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cr787\\OneDrive\\Escritorio\\U. FIDÉLITAS\\CURSOS\\7° Cuatrimestre\\Progra Avanzada Web\\Proyecto\\ProyectoInstitutoWeb\\ProyectoWeb\\obj\\",
+      "projectPath": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\ProyectoWeb.csproj",
+      "packagesPath": "C:\\Users\\Esteban\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cr787\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Esteban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9633,6 +9638,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9687,7 +9693,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -72,6 +72,18 @@ namespace ProyectoWeb.Models
                 return 0;
         }
 
+        public int EditarUsuario(UsuarioEnt usuario)
+        {
+            string url = _urlApi + "api/Usuario/EditarUsuario";
+            JsonContent obj = JsonContent.Create(usuario);
+            var resp = _httpClient.PutAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return 1;
+            else
+                return 0;
+        }
+
         public int ActualizarRolUsuario(UsuarioEnt usuario)
         {
             string url = _urlApi + "api/Usuario/ActualizarRolUsuario";

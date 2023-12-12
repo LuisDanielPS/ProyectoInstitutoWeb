@@ -2,13 +2,27 @@
 
 @{
     ViewData["Title"] = "ActualizarRolUsuario";
-    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+    Layout = "~/Views/Shared/_Layout_Administracion.cshtml";
 }
+<main id="main" class="main">
 
-<div class="col-md-12 grid-margin stretch-card">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">Información General</h4>
+    <div class="pagetitle">
+        <h1>Editar Usuario Rol</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Inicio</a></li>
+                <li class="breadcrumb-item">Rol</li>
+                <li class="breadcrumb-item active">Editar Usuario</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
 
             @using (Html.BeginForm("ActualizarRolUsuario", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
             {
@@ -25,12 +39,21 @@
                     <label>Rol</label>
                     @Html.DropDownListFor(m => m.IdRol, ViewBag.Roles as List<SelectListItem>, new { @class="form-control form-control-lg" })
                 </div>
-                <div style="margin-top: 25px;">
 
-                    <button type="submit" class="btn btn-primary mr-2">Procesar</button>
-
-                </div>
+                <br/>
+                            <div class="row">
+                                <div class="col-lg-3 order-lg-2">
+                                    <button type="submit" class="btn btn-outline-success btn-lg px-5">Procesar</button>
+                                </div>
+                                <div class="col-lg-3 order-lg-1">
+                                    <button type="button" class="btn btn-secondary btn-lg px-5" onclick="window.history.back();">Regresar</button>
+                                </div>
+                            </div>
             }
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+
+</main><!-- End #main -->

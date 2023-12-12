@@ -2,78 +2,52 @@
 
 @{
     ViewBag.Title = "RegistrarMatricula";
-    Layout = "~/Views/Shared/_Layout_PantallasAdmin.cshtml";
+    Layout = "~/Views/Shared/_Layout_Administracion.cshtml";
 }
-@using (Html.BeginForm("RegistrarMatricula", "Matricula", FormMethod.Post))
+
+<main id="main" class="main">
+    @using (Html.BeginForm("RegistrarMatricula", "Matricula", FormMethod.Post, new { id = "FormForm" }))
 {
+    <div class="pagetitle">
+        <h1>Registrar Matricula</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Inicio</a></li>
+                <li class="breadcrumb-item">Matricula</li>
+                <li class="breadcrumb-item active">Nueva</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
 
-    <section id="hero">
-        <div class="container position-relative">
-            <div class="row justify-content-center align-items-center h-1">
-                <div class="col-12 col-md-8 col-lg-12 col-xl-5" style="width: 100%">
-                    <div class="card-body p-2 text-center" style="position: relative;">
+    <section class="section">
 
-
-                        <div class="mb-md-5 mt-md-4 pb-1" style="padding-top: 100px;">
-                            <h2 class="fw-bold text-uppercase" style="color: black">Registro de Matrícula</h2>
-
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <br/>
                             @if (ViewBag.MsjPantalla != null)
                             {
-                                <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-danger" role="alert">
+                                <div id="Msj" style="text-align:center;" class="alert alert-danger" role="alert">
                                     @ViewBag.MsjPantalla
                                 </div>
                             }
 
                             <div class="row" style="text-align:center; position:center;">
-                                <div class="col-md-12">
-                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
-                                        <div class="form-group" style="margin-top: 25px;">
-                                            <label>Usuario que matricula</label>
-                                            @Html.DropDownListFor(m => m.IdUsuario, ViewBag.Usuarios as List<SelectListItem>, new { @class="form-control form-control-lg" })
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Usuario que matricula</label>
+                                        @Html.DropDownListFor(m => m.IdUsuario, ViewBag.Usuarios as List<SelectListItem>,"Seleccione un Usuario", new { @class="form-control form-control-lg" })
                                     </div>
 
-                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
-                                        <div class="form-group" style="margin-top: 25px;">
-                                            <label>Curso</label>
-                                            @Html.DropDownListFor(m => m.IdCurso, ViewBag.Cursos as List<SelectListItem>, new { @class="form-control form-control-lg" })
-                                        </div>
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Curso</label>
+                                        @Html.DropDownListFor(m => m.IdCurso, ViewBag.Cursos as List<SelectListItem>,"Seleccione Curso", new { @class="form-control form-control-lg" })
                                     </div>
 
-                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
-                                        <div class="form-group" style="margin-top: 25px;">
-                                            <label>Modalidad</label>
-                                            @Html.DropDownListFor(m => m.IdModalidad, ViewBag.Modalidades as List<SelectListItem>, new { @class="form-control form-control-lg" })
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
-                                        <div class="form-group" style="margin-top: 25px;">
-                                            <label>Nivel</label>
-                                            @Html.DropDownListFor(m => m.IdNivel, ViewBag.Niveles as List<SelectListItem>, new { @class="form-control form-control-lg" })
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group " style="text-align: left; margin-top: 25px;">
-                                        <div class="form-group" style="margin-top: 25px;">
-                                            <label>Horario</label>
-                                            @Html.DropDownListFor(m => m.IdHorario, ViewBag.Horarios as List<SelectListItem>, new { @class="form-control form-control-lg" })
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group" style="text-align:left; margin-top: 25px;">
-                                        <label>Monto</label>
-                                        @Html.TextBoxFor(
-                                    m => m.Monto,
-                                    new
-                                    {
-                                    @type = "Number",
-                                    @placeholder = "Monto",
-                                    @id = "monto",
-                                    @style = "text-align: center",
-                                    @class = "form-control form-control-lg",
-                                    @required = "required"
-                                    })
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Modalidad</label>
+                                        @Html.DropDownListFor(m => m.IdModalidad, ViewBag.Modalidades as List<SelectListItem>,"Seleccione Modalidad", new { @class="form-control form-control-lg" })
                                     </div>
 
                                     <div class="form-group" style="text-align: left; margin-top: 25px;">
@@ -91,25 +65,144 @@
                                     })
                                     </div>
 
-
-                                    <button type="submit" class="btn btn-outline-success btn-lg px-5" style="margin-top: 5%;">
-                                        Guardar
-                                    </button>
-                                    @* <a type="button" href="@Url.Action("Index","Amin")" class="btn btn-outline-danger btn-lg px-5" style="margin-top: 5%;">
-                                Regresar
-                                </a> *@
-                                    <br>
                                 </div>
 
+                                <div class="col-md-6">
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Nivel</label>
+                                        @Html.DropDownListFor(m => m.IdNivel, ViewBag.Niveles as List<SelectListItem>,"Seleccione Nivel", new { @class="form-control form-control-lg" })
+                                    </div>
 
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Horario</label>
+                                        @Html.DropDownListFor(m => m.IdHorario, ViewBag.Horarios as List<SelectListItem>,"Seleccione Horario", new { @class="form-control form-control-lg" })
+                                    </div>
 
+                                    <div class="form-group" style="text-align:left; margin-top: 25px;">
+                                        <label>Monto</label>
+                                        @Html.TextBoxFor(
+                                    m => m.Monto,
+                                    new
+                                    {
+                                    @type = "Number",
+                                    @placeholder = "Monto",
+                                    @id = "monto",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                    </div>
+
+                                    
+
+                                </div>
                             </div>
-                        </div>
-
+                            <br/>
+                            <br />
+                            <div class="row text-center">
+                                <div class="col-lg-6 order-lg-2">
+                                    <button type="button" id="FormButton" class="btn btn-outline-success btn-lg px-5">Guardar</button>
+                                </div>
+                                <div class="col-lg-6 order-lg-1">
+                                    <button type="button" class="btn btn-secondary btn-lg px-5" onclick="window.history.back();">Regresar</button>
+                                </div>
+                            </div>
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
-}
+
+
+    <!-- successModal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+            <div class="modal-content justify-content-center align-items-center">
+                <div class="modal-header align-items-center">
+                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-award-fill text-success"></i>  Alerta  <i class="bi bi-award-fill text-success"></i></h5>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    ¿Desea crear la matricula?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal-->
+    <!-- errorModal -->
+    <div class="modal fade" id="errorModal" tabindex="-1">
+        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+            <div class="modal-content justify-content-center align-items-center">
+                <div class="modal-header align-items-center">
+                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-x-octagon text-danger"></i>  Alerta  <i class="bi bi-x-octagon text-danger"></i></h5>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    Por favor llene todos los campos resaltados en rojo
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal-->
+                        }
+</main><!-- End #main -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var FormValidation = document.getElementById("FormForm");
+        var FormButtonValidation = document.getElementById("FormButton");
+
+        FormButtonValidation.addEventListener("click", function (event) {
+            event.preventDefault(); // Evitar el envío automático del formulario
+
+            if (isFormValid(FormValidation)) {
+                // Si el formulario es válido, muestra el modal de éxito
+                $("#successModal").modal("show");
+            } else {
+                emptyfields(FormValidation);
+                $("#errorModal").modal("show");
+
+            }
+        });
+
+        function isFormValid(form) {
+            // Valida si todos los campos del formulario están llenos
+            var formInputs = form.querySelectorAll("input, textarea, select");
+            for (var i = 0; i < formInputs.length; i++) {
+                if (formInputs[i].value.trim() === "") {
+                    return false; // El formulario no está completo
+                } else {
+                    formInputs[i].style.borderColor = "Green";
+                }
+            }
+            return true; // El formulario está completo
+        }
+
+        function emptyfields(form) {
+            // Valida si todos los campos del formulario están llenos
+            var formInputs = form.querySelectorAll("input, textarea, select");
+            for (var i = 0; i < formInputs.length; i++) {
+                if (formInputs[i].value.trim() === "") {
+                    formInputs[i].style.borderColor = "FireBrick";
+                } else {
+                    formInputs[i].style.borderColor = "Green";
+                }
+            }
+            return true; // El formulario está completo
+        }
+    });
+
+    // Esperar 5 segundos y luego ocultar el mensaje
+    setTimeout(function () {
+        var mensajeDiv = document.getElementById('msj');
+        if (mensajeDiv != null) {
+            mensajeDiv.style.display = 'none';
+        }
+    }, 5000); // 5000 milisegundos = 5 segundos
+</script>

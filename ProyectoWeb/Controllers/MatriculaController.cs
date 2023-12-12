@@ -22,69 +22,119 @@ namespace ProyectoWeb.Controllers
         [HttpGet]
         public IActionResult RegistrarMatricula()
         {
-            ViewBag.Cursos = _matriculaModel.ConsultarCursos();
-            ViewBag.Modalidades = _matriculaModel.ConsultarModalidades();
-            ViewBag.Niveles = _matriculaModel.ConsultarNiveles();
-            ViewBag.Horarios = _matriculaModel.ConsultarHorarios();
-            ViewBag.Usuarios = _matriculaModel.ConsultarUsuariosPorRol();
-            return View();
+            try
+            {
+                ViewBag.Cursos = _matriculaModel.ConsultarCursos();
+                ViewBag.Modalidades = _matriculaModel.ConsultarModalidades();
+                ViewBag.Niveles = _matriculaModel.ConsultarNiveles();
+                ViewBag.Horarios = _matriculaModel.ConsultarHorarios();
+                ViewBag.Usuarios = _matriculaModel.ConsultarUsuariosPorRol();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+            
         }
 
         [HttpPost]
         public IActionResult RegistrarMatricula(MatriculaEnt entidad)
         {
-            var resp = _matriculaModel.RegistrarMatricula(entidad);
+            try
+            {
+                var resp = _matriculaModel.RegistrarMatricula(entidad);
 
-            if (resp == -1)
-            {
-                ViewBag.Cursos = _matriculaModel.ConsultarCursos();
-                ViewBag.Modalidades = _matriculaModel.ConsultarModalidades();
-                ViewBag.Niveles = _matriculaModel.ConsultarNiveles();
-                ViewBag.Horarios = _matriculaModel.ConsultarHorarios();
-                ViewBag.Usuarios = _matriculaModel.ConsultarUsuariosPorRol();
-                return RedirectToAction("RegistrarMatricula", "Matricula");
+                if (resp == -1)
+                {
+                    TempData["Actualizacion1"] = true;
+                    return RedirectToAction("ConsultarUsuariosMatriculados", "Matricula");
+                }
+                else if (resp == 150)
+                {
+                    ViewBag.Cursos = _matriculaModel.ConsultarCursos();
+                    ViewBag.Modalidades = _matriculaModel.ConsultarModalidades();
+                    ViewBag.Niveles = _matriculaModel.ConsultarNiveles();
+                    ViewBag.Horarios = _matriculaModel.ConsultarHorarios();
+                    ViewBag.Usuarios = _matriculaModel.ConsultarUsuariosPorRol();
+                    ViewBag.MsjPantalla = "El usuario indicado ya se encuentra registrado, por favor verifique";
+                    return View();
+                }
+                else
+                {
+                    TempData["Actualizacion2"] = true;
+                    return RedirectToAction("ConsultarUsuariosMatriculados", "Matricula");
+                }
             }
-            else if (resp == 150)
+            catch (Exception ex)
             {
-                ViewBag.Cursos = _matriculaModel.ConsultarCursos();
-                ViewBag.Modalidades = _matriculaModel.ConsultarModalidades();
-                ViewBag.Niveles = _matriculaModel.ConsultarNiveles();
-                ViewBag.Horarios = _matriculaModel.ConsultarHorarios();
-                ViewBag.Usuarios = _matriculaModel.ConsultarUsuariosPorRol();
-                ViewBag.MsjPantalla = "El usuario indicado ya se encuentra registrado, por favor verifique";
-                return View();
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
             }
-            else
-            {
-                ViewBag.Cursos = _matriculaModel.ConsultarCursos();
-                ViewBag.Modalidades = _matriculaModel.ConsultarModalidades();
-                ViewBag.Niveles = _matriculaModel.ConsultarNiveles();
-                ViewBag.Horarios = _matriculaModel.ConsultarHorarios();
-                ViewBag.Usuarios = _matriculaModel.ConsultarUsuariosPorRol();
-                ViewBag.MsjPantalla = "No fue posible registrar la matrícula";
-                return View();
-            }
+
         }
 
         [HttpGet]
         public IActionResult ConsultarClientes()
         {
-            var datos = _matriculaModel.ConsultarClientes();
-            return View(datos);
+            try
+            {
+                var datos = _matriculaModel.ConsultarClientes();
+                return View(datos);
+            }
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+           
         }
 
         [HttpGet]
         public IActionResult ConsultarUsuariosMatriculados()
         {
-            var datos = _matriculaModel.ConsultarUsuariosMatriculados();
-            return View(datos);
+            try
+            {
+                bool Message1 = TempData["Actualizacion1"] as bool? ?? false;
+                if (Message1)
+                {
+                    ViewBag.MensageExitoso = "Matricula exitosa";
+                    TempData.Remove("Actualizacion1");
+                }
+
+                bool Message2 = TempData["Actualizacion2"] as bool? ?? false;
+                if (Message2)
+                {
+                    ViewBag.MensageExitoso = "Error al procesas la matricula";
+                    TempData.Remove("Actualizacion2");
+                }
+
+                var datos = _matriculaModel.ConsultarUsuariosMatriculados();
+                return View(datos);
+            }
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+            
         }
 
         [HttpGet]
         public IActionResult EliminarMatriculaPorUsuario(long IdUsuario)
         {
-            var resp = _matriculaModel.EliminarMatriculaPorUsuario(IdUsuario);
-            return RedirectToAction("ConsultarUsuariosMatriculados", "Matricula");
+            try
+            {
+                var resp = _matriculaModel.EliminarMatriculaPorUsuario(IdUsuario);
+                return RedirectToAction("ConsultarUsuariosMatriculados", "Matricula");
+            }
+            catch (Exception ex)
+            {
+                String message = ex.Message;
+                return RedirectToAction("HomeError", "Error");
+            }
+            
         }
 
     }

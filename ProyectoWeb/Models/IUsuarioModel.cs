@@ -12,6 +12,7 @@ namespace ProyectoWeb.Models
         public int ActualizarRolUsuario(UsuarioEnt usuario);
         public List<SelectListItem>? ConsultarRoles();
         public UsuarioEnt? ConsultarUsuario(long idUsuario);
+        public int EditarUsuario(UsuarioEnt usuario);
 
     }
 }
