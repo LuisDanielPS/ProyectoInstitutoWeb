@@ -8,7 +8,8 @@ namespace ProyectoWeb.Models
         public UsuarioEnt? IniciarSesion(UsuarioEnt entidad);
         public int RegistrarUsuario(UsuarioEnt entidad);
         public List<UsuarioEnt>? ListaUsuarios();
-        public int ActualizarEstadoUsuario(long idUsuario);
+        public int ActualizarEstadoUsuario(UsuarioEnt entidad);
+        public int ActualizarContrasena(UsuarioEnt usuario);
         public int ActualizarRolUsuario(UsuarioEnt usuario);
         public List<SelectListItem>? ConsultarRoles();
         public UsuarioEnt? ConsultarUsuario(long idUsuario);

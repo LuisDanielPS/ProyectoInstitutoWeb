@@ -32,7 +32,6 @@ namespace ProyectoWeb.Models
                 else
                     return null;
 
-           
         }
 
         public int RegistrarUsuario(UsuarioEnt entidad)
@@ -49,7 +48,9 @@ namespace ProyectoWeb.Models
 
         public List<UsuarioEnt>? ListaUsuarios()
         {
-            string url = _urlApi + "api/Usuario/ListaUsuarios";
+            string id  = _HttpContextAccessor.HttpContext.Session.GetString("IdUsuario");
+            long IdUsuario = long.Parse(id);
+            string url = _urlApi + "api/Usuario/ListaUsuarios?idUsuario=" + IdUsuario;
             var resp = _httpClient.GetAsync(url).Result;
 
             if (resp.IsSuccessStatusCode)
@@ -58,16 +59,14 @@ namespace ProyectoWeb.Models
                 return null;
         }
 
-		public int ActualizarEstadoUsuario(long idUsuario)
+		public int ActualizarEstadoUsuario(UsuarioEnt entidad)
 		{
-            var usuario = new UsuarioEnt();
-            usuario.IdUsuario = idUsuario;
-			string url = _urlApi + "api/Usuario/ActualizarEstadoUsuario";
-			JsonContent obj = JsonContent.Create(usuario);
+            string url = _urlApi + "api/Usuario/ActualizarEstadoUsuario";
+			JsonContent obj = JsonContent.Create(entidad);
 			var resp = _httpClient.PutAsync(url, obj).Result;
 
             if (resp.IsSuccessStatusCode)
-                return 1;
+                return resp.Content.ReadFromJsonAsync<int>().Result;
             else
                 return 0;
         }
@@ -92,6 +91,20 @@ namespace ProyectoWeb.Models
 
             if (resp.IsSuccessStatusCode)
                 return 1;
+            else
+                return 0;
+        }
+
+        public int ActualizarContrasena(UsuarioEnt usuario)
+        {
+            string IdUsuario = _HttpContextAccessor.HttpContext.Session.GetString("IdUsuario");
+            usuario.IdUsuario = long.Parse(IdUsuario);
+            string url = _urlApi + "api/Usuario/ActualizarContrasena";
+            JsonContent obj = JsonContent.Create(usuario);
+            var resp = _httpClient.PutAsync(url, obj).Result;
+
+            if (resp.IsSuccessStatusCode)
+                return resp.Content.ReadFromJsonAsync<int>().Result;
             else
                 return 0;
         }

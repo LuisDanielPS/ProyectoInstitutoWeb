@@ -48,6 +48,13 @@ namespace ProyectoWeb.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult CerrarSesion()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("index", "Home");
+        }
+
         [HttpPost]
         public IActionResult IniciarSesion(UsuarioEnt entidad)
         {
@@ -60,6 +67,7 @@ namespace ProyectoWeb.Controllers
                     {
                         HttpContext.Session.SetString("NombreUsuario", resp.Nombre);
                         HttpContext.Session.SetString("IdUsuario", resp.IdUsuario.ToString());
+                        HttpContext.Session.SetString("RolUsuario", resp.IdRol.ToString());
                         return RedirectToAction("Index", "Admin");
                     }
                     else

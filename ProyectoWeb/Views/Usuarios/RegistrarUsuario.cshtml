@@ -8,28 +8,30 @@
 <main id="main" class="main">
     @using (Html.BeginForm("RegistrarUsuario", "Usuarios", FormMethod.Post, new { id = "FormForm" }))
     {
-    <div class="pagetitle">
-        <h1>Registrar Usuario</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a>Inicio</a></li>
-                <li class="breadcrumb-item">Usuario</li>
-                <li class="breadcrumb-item active">Nuevo</li>
-            </ol>
-        </nav>
-    </div><!-- End Page Title -->
+        <div class="pagetitle">
+            <h1>Registrar Usuario</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a>Inicio</a></li>
+                    <li class="breadcrumb-item">Usuario</li>
+                    <li class="breadcrumb-item active">Nuevo</li>
+                </ol>
+            </nav>
+        </div>
 
-    <section class="section">
+        <!-- End Page Title -->
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
+        <section class="section">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
 
 
 
-                        <div class="row" style="text-align:center; position:center;">
-                            <br/>
+                            <div class="row" style="text-align:center; position:center;">
+                                <br />
                                 @if (ViewBag.MsjPantalla != null)
                                 {
                                     <div id="Msj" style="text-align:center;" class="alert alert-danger" role="alert">
@@ -173,87 +175,71 @@
                                                 </div>
 
                                                 <div class="form-group" style="text-align: left; ">
-                                        <label>Confirmar Contraseña</label>
-                                    @Html.TextBoxFor(
-                                    m => m.ConfirmarPwUsuario,
-                                    new
-                                    {
-                                    @type = "password",
-                                    @placeholder = "Confirmar Contraseña",
-                                    @style = "text-align: center",
-                                    @class = "form-control form-control-lg",
-                                    @required = "required"
-                                    })
-                                </div>
+                                                    <label>Confirmar Contraseña</label>
+                                                    @Html.TextBoxFor(
+                                                m => m.ConfirmarPwUsuario,
+                                                new
+                                                {
+                                                @type = "password",
+                                                @placeholder = "Confirmar Contraseña",
+                                                @style = "text-align: center",
+                                                @class = "form-control form-control-lg",
+                                                @required = "required"
+                                                })
+                                                </div>
 
                                             </div>
                                         </div>
                                         <br />
                                     </div>
                                 </div>
-
-                                    
-
-                                    
-
-                                    <br />
-                                </div>
-
                                 <br />
-                                    <div class="row text-center">
-                                        <div class="col-lg-6 order-lg-2">
-                                    <button type="button" id="FormButton" class="btn btn-outline-success btn-lg px-5">Crear</button>
-                                        </div>
-                                        <div class="col-lg-6 order-lg-1">
-                                            <button type="button" class="btn btn-secondary btn-lg px-5" onclick="window.history.back();">Regresar</button>
-                                        </div>
-                                    </div>
-                                <br>
-                                
-                        
+                            </div>
+                            <div class="d-flex justify-content-end" style="margin-right: 23px;">
+                                <button type="button" id="FormButton" class="btn btn-outline-primary btn-lg px-5">Registrar</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- successModal -->
+        <div class="modal fade" id="successModal" tabindex="-1">
+            <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+                <div class="modal-content justify-content-center align-items-center">
+                    <div class="modal-header align-items-center">
+                        <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-award-fill text-success"></i>  Alerta  <i class="bi bi-award-fill text-success"></i></h5>
+                    </div>
+                    <div class="modal-body" style="text-align:center">
+                        ¿Desea crear la el usuario?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Crear</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- successModal -->
-    <div class="modal fade" id="successModal" tabindex="-1">
-        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
-            <div class="modal-content justify-content-center align-items-center">
-                <div class="modal-header align-items-center">
-                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-award-fill text-success"></i>  Alerta  <i class="bi bi-award-fill text-success"></i></h5>
-                </div>
-                <div class="modal-body" style="text-align:center">
-                    ¿Desea crear la el usuario?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-success">Crear</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Modal-->
-    <!-- errorModal -->
-    <div class="modal fade" id="errorModal" tabindex="-1">
-        <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
-            <div class="modal-content justify-content-center align-items-center">
-                <div class="modal-header align-items-center">
-                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-x-octagon text-danger"></i>  Alerta  <i class="bi bi-x-octagon text-danger"></i></h5>
-                </div>
-                <div class="modal-body" style="text-align:center">
-                    Por favor llene todos los campos resaltados en rojo
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+        <!-- End Modal-->
+        <!-- errorModal -->
+        <div class="modal fade" id="errorModal" tabindex="-1">
+            <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+                <div class="modal-content justify-content-center align-items-center">
+                    <div class="modal-header align-items-center">
+                        <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-x-octagon text-danger"></i>  Alerta  <i class="bi bi-x-octagon text-danger"></i></h5>
+                    </div>
+                    <div class="modal-body" style="text-align:center">
+                        Por favor llene todos los campos resaltados en rojo
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Modal-->
-
-
+        <!-- End Modal-->
     }
 </main><!-- End #main -->
 

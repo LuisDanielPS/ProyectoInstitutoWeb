@@ -66,34 +66,35 @@
                                 <div class="table-responsive">
 
                                     <table id="DataTable" class="table table-hover text-center" width="100%">
-                <thead>
-                    <tr>
-                        <th>Nombre completo</th>
-                        <th>Rol</th>
-                        <th style="text-align: center;">Actualizar rol</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
-                            <td>@item.NombreRol</td>
-                            <td style="text-align: center;"><a href="@Url.Action("ActualizarRolUsuario","Usuarios", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-pencil-fill"></span></a></td>
-                        </tr>
-                    }
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align:center">Nombre completo</th>
+                                                <th style="text-align:center">Rol</th>
+                                                <th style="text-align: center;">Actualizar rol</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                @if (item.IdEstatus == 1)
+                                                {
+                                                    <tr>
+                                                        <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
+                                                        <td>@item.NombreRol</td>
+                                                        <td style="text-align: center;">
+                                                            <a href="@Url.Action("ActualizarRolUsuario", "Usuarios", new { idUsuario = item.IdUsuario })">
+                                                                <span style="color: #000;" class="bi bi-pencil-fill"></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <button type="button" class="btn btn-secondary" onclick="window.history.back();">Regresar</button>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

@@ -20,6 +20,7 @@ namespace CCIH.Entities
         public long IdRol { get; set; }
         public string Usuario { get; set; } = string.Empty;
         public string PwUsuario { get; set; } = string.Empty;
+        public string PwUsuarioAnterior { get; set; } = string.Empty;
 
         public string ConfirmarPwUsuario { get; set; } = string.Empty;
         public DateTime FechaCreacion { get; set; }

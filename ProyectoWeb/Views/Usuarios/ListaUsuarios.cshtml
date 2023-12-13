@@ -38,7 +38,7 @@
                 <li class="breadcrumb-item active">Listado de Usuarios</li>
             </ol>
         </nav>
-    </div><!-- End Page Title -->
+    </div>
 
     <section class="section">
 
@@ -46,9 +46,6 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-
-
-                        
                         <div class="row">
                             <br />
                             @if (ViewBag.MensageExitoso != null)
@@ -67,49 +64,47 @@
                                 <div class="table-responsive">
 
                                     <table id="DataTable" class="table table-hover text-center" width="100%">
-                <thead>
-                    <tr>
-                        <th>Cédula</th>
-                        <th>Nombre completo</th>
-                        <th>Correo</th>
-                        <th>Teléfono</th>
-                        <th>Dirección</th>
-                        <th style="text-align: center;">Inactivar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@item.Cedula</td>
-                            <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
-                            <td>@item.Correo</td>
-                            <td>@item.Telefono</td>
-                            <td>@item.Direccion</td>
-                            <td style="text-align: center;"><a href="@Url.Action("ActualizarEstadoUsuario","Usuarios", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-trash-fill"></span></a></td>
-                        </tr>
-                    }
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: center;">Cédula</th>
+                                                <th style="text-align: center;">Nombre completo</th>
+                                                <th style="text-align: center;">Correo</th>
+                                                <th style="text-align: center;">Teléfono</th>
+                                                <th style="text-align: center;">Estado</th>
+                                                <th style="text-align: center;">Cambiar Estado</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>@item.Cedula</td>
+                                                    <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
+                                                    <td>@item.Correo</td>
+                                                    <td>@item.Telefono</td>
+                                                    @if (@item.IdEstatus == 1)
+                                                    {
+                                                        <td>Activo</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>Inactivo</td>
+                                                    }
+                                                    <td style="text-align: center;"><a href="@Url.Action("ActualizarEstadoUsuario","Usuarios", new { q = item.IdUsuario })"><span style="color: #000;" class="bi bi-arrow-counterclockwise"></span></a></td>
+                                                </tr>
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-2">
-                            <button type="button" class="btn btn-secondary" onclick="window.history.back();">Regresar</button>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
 
 </main><!-- End #main -->
-
-
-
 
 <script>
 
@@ -120,7 +115,7 @@
         if (mensajeDiv != null) {
             mensajeDiv.style.display = 'none';
         }
-        
+
     }, 5000); // 5000 milisegundos = 5 segundos
 
 </script>

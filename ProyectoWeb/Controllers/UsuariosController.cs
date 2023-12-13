@@ -37,9 +37,7 @@ namespace ProyectoWeb.Controllers
                 return RedirectToAction("HomeError", "Error");
             }
             
-        }
-
-       
+        }               
 
         [HttpPost]
         public IActionResult RegistrarUsuario(UsuarioEnt entidad)
@@ -97,7 +95,6 @@ namespace ProyectoWeb.Controllers
                 TempData.Remove("Actualizacion2");
             }
 
-
             try
             {
                 var datos = _usuarioModel.ListaUsuarios();
@@ -128,11 +125,13 @@ namespace ProyectoWeb.Controllers
         }
 
         [HttpGet]
-        public IActionResult ActualizarEstadoUsuario(long idUsuario)
+        public IActionResult ActualizarEstadoUsuario(long q)
         {
+            var entidad = new UsuarioEnt();
+            entidad.IdUsuario= q;
             try
             {
-                _usuarioModel.ActualizarEstadoUsuario(idUsuario);
+                _usuarioModel.ActualizarEstadoUsuario(entidad);
                 return RedirectToAction("ListaUsuarios", "Usuarios");
             }
             catch (Exception ex)
@@ -185,8 +184,6 @@ namespace ProyectoWeb.Controllers
             }
             
         }
-
-
 
         [HttpGet]
         public IActionResult PerfilUsuario(long i)
@@ -246,6 +243,34 @@ namespace ProyectoWeb.Controllers
             }
             
         }
+
+        [HttpGet]
+        public IActionResult ActualizarContrasena()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ActualizarContrasena(UsuarioEnt entidad)
+        {
+
+            if (entidad.PwUsuarioAnterior.Trim() == entidad.PwUsuario.Trim())
+            {
+                ViewBag.MensajePantalla = "Debe ingresar una contraseña nueva";
+                return View();
+            }
+
+            var resp = _usuarioModel.ActualizarContrasena(entidad);
+
+            if (resp == 1)
+                return RedirectToAction("Index", "Admin");
+            else
+            {
+                ViewBag.MensajePantalla = "No se pudo actualizar su contraseña";
+                return View();
+            }
+        }
+
     }
 
 }

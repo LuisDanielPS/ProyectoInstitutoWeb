@@ -25,16 +25,12 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-
-                        
-                            
-
                             <div id="dovform2columnas" class="row" style="text-align:center; position:center;">
                                 <div class="col-md-12">
                                     <div class="row">
                                         <br/>
-                                        <br />
-                                        <br />
+                                        <br/>
+                                        <br/>
                                         @if (ViewBag.MensageExitoso != null)
                                         {
                                             <div id="Msj" style="text-align:center;" class="alert alert-success" role="alert">
@@ -128,9 +124,6 @@
                                             })
                                             </div>
 
-
-                                            
-
                                             <div class="form-group" style="text-align: left; ">
                                                 <label>Segundo Apellido</label>
                                                 @Html.TextBoxFor(
@@ -162,31 +155,17 @@
 
                                             <div class="form-group" style="text-align:left; ">
                                                 <label>Rol</label>
-                                                @Html.DropDownListFor(m => m.IdRol, ViewBag.RolesCombo as List<SelectListItem>, new { @class="form-control form-control-lg" })
+                                                @Html.DropDownListFor(m => m.IdRol, ViewBag.RolesCombo as List<SelectListItem>, new { @class = "form-control form-control-lg", disabled = "disabled" })
 
-                                            </div>
-                                            
+                                            </div>                                          
                                         </div>
                                     </div>
                                     <br />
                                 </div>
                             </div>
-
-
-                                    <div class="row">
-                                    <br />
-                                        <div class="col-lg-6 order-lg-2">
-                                    <button type="button" id="FormButton" class="btn btn-outline-primary btn-lg px-5">Actualizar</button>
-                                        </div>
-                                        <div class="col-lg-6 order-lg-1">
-                                            <button type="button" class="btn btn-secondary btn-lg px-5" onclick="window.history.back();">Regresar</button>
-                                        </div>
-                                    </div>
-                                    <br>
-
-
-
-                       
+                            <div class="d-flex justify-content-end">
+                                <button type="button" id="FormButton" class="btn btn-outline-primary btn-lg px-5">Actualizar</button>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -197,15 +176,12 @@
     <div class="modal fade" id="successModal" tabindex="-1">
         <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
             <div class="modal-content justify-content-center align-items-center">
-                <div class="modal-header align-items-center">
-                    <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-award-fill text-success"></i>  Alerta  <i class="bi bi-award-fill text-success"></i></h5>
-                </div>
                 <div class="modal-body" style="text-align:center">
-                    ¿Desea modificar la informacion del usuario?
+                    ¿Está seguro que desea actualizar la información?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-success">Crear</button>
+                    <button type="submit" class="btn btn-success">Confirmar</button>
                 </div>
             </div>
         </div>

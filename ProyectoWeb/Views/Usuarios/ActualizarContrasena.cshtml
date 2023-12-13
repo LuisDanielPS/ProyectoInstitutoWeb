@@ -1,0 +1,190 @@
+﻿@model CCIH.Entities.UsuarioEnt
+@{
+    ViewData["Title"] = "Cambiar Contraseña";
+    Layout = "~/Views/Shared/_Layout_Administracion.cshtml";
+}
+
+
+<main id="main" class="main">
+    @using (Html.BeginForm("ActualizarContrasena", "Usuarios", FormMethod.Post, new { id = "FormForm" }))
+    {
+        <div class="pagetitle">
+            <h1>Cambiar Contraseña</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a>Inicio</a></li>
+                    <li class="breadcrumb-item">Usuario</li>
+                    <li class="breadcrumb-item active">Cambiar Contraseña</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- End Page Title -->
+
+        <section class="section">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="dovform2columnas" class="row" style="text-align:center; position:center;">
+                                <div class="col-md-12">
+                                    @if (ViewBag.MensajePantalla != null)
+                                    {                                                                           
+                                    <div id="Msj" class="alert alert-warning" style="margin-top:10px" role="alert">
+                                        @ViewBag.MensajePantalla
+                                    </div>
+                                    }
+                                    <div class="row">
+                                        <br />
+                                        <br/>
+                                        <br/>
+                                        
+                                        @if (ViewBag.MensageExitoso != null)
+                                        {
+                                            <div id="Msj" style="text-align:center;" class="alert alert-success" role="alert">
+                                                @ViewBag.MensageExitoso
+                                            </div>
+                                        }
+                                        else if (ViewBag.MensageError != null)
+                                        {
+                                            <div id="Msj" style="text-align:center;" class="alert alert-danger" role="alert">
+                                                @ViewBag.MensageError
+                                            </div>
+                                        }
+                                        <div class="col-md-6">
+                                            <br/>
+                                            
+                                            @Html.HiddenFor(m => m.IdUsuario)
+
+                                            <div class="form-group" style="text-align: left; ">
+                                                <label>Contraseña Antigua</label>
+                                                @Html.TextBoxFor(
+                                            m => m.PwUsuarioAnterior,
+                                            new
+                                            {
+                                            @type = "password",
+                                            @placeholder = "Contraseña Antigua",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <br />
+                                            <div class="form-group" style="text-align:left; ">
+                                                <label>Nueva Contraseña</label>
+                                                @Html.TextBoxFor(
+                                            m => m.PwUsuario,
+                                            new
+                                            {
+                                            @type = "password",
+                                            @placeholder = "Nueva Contraseña",
+                                            @style = "text-align: center",
+                                            @class = "form-control form-control-lg",
+                                            @required = "required"
+                                            })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <br/>
+                                </div>                                
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" id="FormButton" class="btn btn-outline-primary btn-lg px-5">Actualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- successModal -->
+        <div class="modal fade" id="successModal" tabindex="-1">
+            <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+                <div class="modal-content justify-content-center align-items-center">
+                    <div class="modal-body" style="text-align:center">
+                        ¿Está seguro que desea actualizar la información?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal-->
+        <!-- errorModal -->
+       <div class="modal fade" id="errorModal" tabindex="-1">
+            <div class="modal-dialog justify-content-center align-items-center" style="margin-top: 15%">
+                <div class="modal-content justify-content-center align-items-center">
+                    <div class="modal-header align-items-center">
+                        <h5 class="modal-title justify-content-center align-items-center"><i class="bi bi-x-octagon text-danger"></i>  Alerta  <i class="bi bi-x-octagon text-danger"></i></h5>
+                    </div>
+                    <div class="modal-body" style="text-align:center">
+                        Por favor llene todos los campos resaltados en rojo
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal-->
+    }
+</main><!-- End #main -->
+
+<script>
+    // Esperar 5 segundos y luego ocultar el mensaje
+    setTimeout(function () {
+        var mensajeDiv = document.getElementById('Msj');
+        if (mensajeDiv != null) {
+            mensajeDiv.style.display = 'none';
+        }
+    }, 5000); // 5000 milisegundos = 5 segundos
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var FormValidation = document.getElementById("FormForm");
+        var FormButtonValidation = document.getElementById("FormButton");
+
+        FormButtonValidation.addEventListener("click", function (event) {
+            event.preventDefault(); // Evitar el envío automático del formulario
+
+            if (arePasswordFieldsValid()) {
+                // Si los campos de contraseña son válidos, muestra el modal de éxito
+                $("#successModal").modal("show");
+            } else {
+                markEmptyFields();
+                $("#errorModal").modal("show");
+            }
+        });
+
+        function arePasswordFieldsValid() {
+            // Valida si los campos de contraseña están llenos
+            var passwordAntigua = document.getElementById("PwUsuarioAnterior");
+            var passwordNueva = document.getElementById("PwUsuario");
+
+            return passwordAntigua.value.trim() !== "" && passwordNueva.value.trim() !== "";
+        }
+
+        function markEmptyFields() {
+            // Marca en rojo los campos de contraseña que están vacíos
+            var passwordAntigua = document.getElementById("PwUsuarioAnterior");
+            var passwordNueva = document.getElementById("PwUsuario");
+
+            if (passwordAntigua.value.trim() === "") {
+                passwordAntigua.style.borderColor = "FireBrick";
+            } else {
+                passwordAntigua.style.borderColor = "Green";
+            }
+
+            if (passwordNueva.value.trim() === "") {
+                passwordNueva.style.borderColor = "FireBrick";
+            } else {
+                passwordNueva.style.borderColor = "Green";
+            }
+        }
+    });
+</script>
