@@ -17,8 +17,24 @@
       "PackagePath": "staticwebassets\\Administracion\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\Activities4kids.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\Activities4kids.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\Fondo.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\Fondo.png"
+    },
+    {
       "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\Icono.png",
       "PackagePath": "staticwebassets\\Administracion\\img\\Icono.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\Icono2.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\Icono2.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\acerca.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\acerca.jpg"
     },
     {
       "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\apple-touch-icon.png",
@@ -29,8 +45,72 @@
       "PackagePath": "staticwebassets\\Administracion\\img\\card.jpg"
     },
     {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-1.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-2.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-3.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-4.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-5.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-6.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details-1.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details-tab-1.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details-tab-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details-tab-2.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details-tab-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details-tab-3.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details-tab-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details-tab-4.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details-tab-4.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details-tab-5.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details-tab-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\course-details.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\course-details.jpg"
+    },
+    {
       "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\favicon.png",
       "PackagePath": "staticwebassets\\Administracion\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\footer.png",
+      "PackagePath": "staticwebassets\\Administracion\\img\\footer.png"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\learn portuguese.jpg",
+      "PackagePath": "staticwebassets\\Administracion\\img\\learn portuguese.jpg"
     },
     {
       "Id": "C:\\Users\\Esteban\\source\\repos\\ProyectoWeb\\ProyectoWeb\\wwwroot\\Administracion\\img\\logo.png",

@@ -1,0 +1,152 @@
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_Layout_Administracion.cshtml";
+}
+
+<main id="main">
+
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+            <h2>Ingles Niños Virtual</h2>
+            <p>Esta es la oportunidad perfecta para que los niños aprendan inglés desde la comodidad de su hogar. 
+                Nuestra plataforma en línea les brindará la flexibilidad de ingresar cuando lo deseen y practicar el 
+                idioma a través de diversas actividades diseñadas especialmente para ellos. Además, contarán con el 
+                seguimiento constante de nuestros experimentados profesores. </p>
+        </div>
+    </div>
+    <section id="course-details" class="course-details">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-8">
+                    <img src="~/Home/img/course-3.jpg" class="img-fluid" alt="">
+                    <h3>Ingles Intensivo Presencial</h3>
+                    <p>
+                        A través de los recursos educativos de la Universidad de Oxford, los niños aprenderán de manera 
+                        virtual a leer, escuchar, hablar y escribir en inglés de manera precisa. Contamos con profesores 
+                        altamente experimentados que guiarán a los niños para que dominen el idioma de manera efectiva y 
+                        divertida.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Modulos</h5>
+                        <p><a>3-4 Meses</a></p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Descuento</h5>
+                        <p>45%</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Cupos Disponibles</h5>
+                        <p>4</p>
+                    </div>
+                    <div class="align-items-center">
+                        <h5><center>Horarios<center></h5>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Lunes y Miercoles</h5>
+                        <p>8.00 am a 10.30 am</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Lunes y Miercoles</h5>
+                        <p>10.30 am a 1.00 pm</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Lunes y Miercoles</h5>
+                        <p>6.00 pm a 9.00 pm</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Martes y Jueves</h5>
+                        <p>8.00 am a 10.30 am</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Martes y Jueves</h5>
+                        <p>10.30 am a 1.00 pm</p>
+                    </div>
+                    <div class="course-info d-flex justify-content-between align-items-center">
+                        <h5>Martes y Jueves</h5>
+                        <p>6.00 pm a 9.00 pm</p>
+                    </div>
+                    @if (Context.Session.GetString("RolUsuario") == "1" || Context.Session.GetString("RolUsuario") == "2" || Context.Session.GetString("RolUsuario") == "3" || Context.Session.GetString("RolUsuario") == "5")
+                    {
+                        <a type="submit" class="btn btn-success" href="@Url.Action("RegistrarMatricula","Matricula")">Matricular Curso</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" href="@Url.Action("IniciarSesion","Login")">Matricular</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cource-details-tabs" class="cource-details-tabs">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Materiales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Estructura del Programa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Requisitos de ingreso</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="tab-1">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <p>Hacemos uso del libro "200+ English Activities for Kids" de Maple Kids. 
+                                        Estos recursos están diseñados específicamente para que los niños aprendan 
+                                        inglés de manera divertida a 
+                                        través de actividades interactivas. Los contenidos del libro están enfocados 
+                                        en situaciones prácticas y lúdicas, proporcionando a los estudiantes la oportunidad 
+                                        de desarrollar habilidades lingüísticas de manera efectiva. Las actividades no solo 
+                                        fomentan la fluidez en el idioma, sino que también construyen confianza y promueven 
+                                        un discurso convincente en un entorno educativo estimulante.</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Home/img/Activities4kids.jpg" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-2">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <p>El PEP es un programa cuyo motor metodológico se sustenta en el Aprendizaje Invertido o Flipped Learning. Como parte de la autonomía y autorregulación del estudiante adulto trabajador, el flipped learning le ayudará a prepararse de antemano para sus lecciones presenciales a través de ejercicios didácticos en la plataforma digital MyELT de National Geographic Learning. La lección presencial se transformará en el campo de práctica para el material cubierto de forma independiente por cada estudiante, siempre guiado por un docente.</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Home/img/course-details-tab-2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab-3">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>Requisitos de ingreso</h3>
+                                    <p class="fst-italic">Tener entre 6 y 15 años de edad</p>
+                                    <p class="fst-italic">Cédula de identidad (en caso de contar con una)</p>
+                                    <p class="fst-italic">Carta de aprobación del adulto encargado</p>
+                                    <p class="fst-italic">Disposición y respeto</p>
+
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="~/Home/img/course-details-tab-3.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>

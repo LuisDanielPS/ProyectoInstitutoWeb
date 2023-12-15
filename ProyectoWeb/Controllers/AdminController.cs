@@ -17,6 +17,32 @@ namespace ProyectoWeb.Controllers
             
         }
 
+        public IActionResult Ing_Intensivo_P()
+        {
+            return View();
+        }
+
+        public IActionResult Ing_Intensivo_V()
+        {
+            return View();
+        }
+
+        public IActionResult Ing_Niños_V()
+        {
+            return View();
+        }
+
+        public IActionResult Ing_Semi_Intensivo_P()
+        {
+            return View();
+        }
+
+        public IActionResult Ing_Semi_Intensivo_V()
+        {
+            return View();
+        }
+
+
 
     }
 }
