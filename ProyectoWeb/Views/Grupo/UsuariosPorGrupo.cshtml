@@ -68,9 +68,10 @@
                                     <table id="DataTable" class="table table-hover text-center" width="100%">
                 <thead>
                     <tr>
-                        <th>Usuario</th>
-                        <th>Nombre completo</th>
-                        <th>Cedula</th>
+                        <th style="text-align: center;">Usuario</th>
+                        <th style="text-align: center;">Nombre completo</th>
+                        <th style="text-align: center;">Cedula</th>
+                        <th style="text-align: center;">Calificar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -80,6 +81,7 @@
                             <td>@item.Usuario</td>
                             <td>@item.Nombre @item.Apellido1 @item.Apellido2</td>
                             <td>@item.Cedula</td>
+                                                    <td style="text-align: center;"><a href="@Url.Action("AgregarCalificaciones","Calificaciones", new { idUsuario = item.IdUsuario })"><span style="color: #000;" class="bi bi-check"></span></a></td>
                         </tr>
                     }
                 </tbody>

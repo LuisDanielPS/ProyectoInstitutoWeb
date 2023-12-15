@@ -34,55 +34,58 @@
 <body>
 
     <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-            <a><img src="~/Home/img/Icono.png" align="left" style= width="60" height="60"></a>
-            <h1 class="logo me-auto"> <a href="@Url.Action("index","Home")">Centro Cultural de Idiomas Heredia</a></h1>
+        @if (Context.Session.GetString("RolUsuario") == "" || Context.Session.GetString("RolUsuario") == null)
+        {
+            <div class="container d-flex align-items-center">
+                <a><img src="~/Home/img/Icono.png" align="left" style= width="60" height="60"></a>
+                <h1 class="logo me-auto"> <a href="@Url.Action("index","Home")">Centro Cultural de Idiomas Heredia</a></h1>
 
                 <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
+                    <ul>
 
-                    <li><a class="active" href="~/Home/index">Inicio</a></li>
-                    <li><a href="~/Home/Acerca">Acerca</a></li>
+                        <li><a class="active" href="~/Home/index">Inicio</a></li>
+                        <li><a href="~/Home/Acerca">Acerca</a></li>
 
                         <li class="dropdown">
-                        <a href="~/Home/Cursos"><span>Cursos</span> <i class="bi bi-chevron-down"></i></a>
+                            <a href="~/Home/Cursos"><span>Cursos</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li class="dropdown">
                                     <a href="#"><span>Ingles Intensivo</span> <i class="bi bi-chevron-right"></i></a>
                                     <ul>
-                                    <li><a href="~/Home/Ing_Intensivo_V">Virtual</a></li>
-                                    <li><a href="~/Home/Ing_Intensivo_P">Presencial</a></li>
+                                        <li><a href="~/Home/Ing_Intensivo_V">Virtual</a></li>
+                                        <li><a href="~/Home/Ing_Intensivo_P">Presencial</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#"><span>Ingles Semi-Intensivo</span> <i class="bi bi-chevron-right"></i></a>
                                     <ul>
-                                    <li><a href="~/Home/Ing_Semi_Intensivo_V">Virtual</a></li>
-                                    <li><a href="~/Home/Ing_Semi_Intensivo_P">Presencial</a></li>
+                                        <li><a href="~/Home/Ing_Semi_Intensivo_V">Virtual</a></li>
+                                        <li><a href="~/Home/Ing_Semi_Intensivo_P">Presencial</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#"><span>Ingles para Niños</span> <i class="bi bi-chevron-right"></i></a>
                                     <ul>
-                                    <li><a href="~/Home/Ing_Niños_V">Virtual</a></li>
+                                        <li><a href="~/Home/Ing_Niños_V">Virtual</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#"><span>Portugués</span> <i class="bi bi-chevron-right"></i></a>
                                     <ul>
-                                    <li><a href="~/Home/Portu_Semi_Intensivo_V">Virtual</a></li>
+                                        <li><a href="~/Home/Portu_Semi_Intensivo_V">Virtual</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                    <li><a href="~/Home/Contacto">Contacto</a></li>
+                        <li><a href="~/Home/Contacto">Contacto</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
 
-            <a href="@Url.Action("IniciarSesion", "Login")" class="get-started-btn">Iniciar Sesión</a>
+                <a href="@Url.Action("IniciarSesion", "Login")" class="get-started-btn">Iniciar Sesión</a>
 
-</div>
+            </div>
+        }
     </header>
     <!-- End Header -->
 
@@ -102,7 +105,7 @@
                             Costado Este del <br>
                             Liceo de Heredia<br><br>
                             <strong>Telefono:</strong> +506 2237 2792<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            <strong>Email:</strong> info@inglescostarica.com<br>
                         </p>
                     </div>
 
@@ -111,7 +114,6 @@
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("index","Home")">Inicio</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Acerca","Home")">Acerca de</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Profesores</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="@Url.Action("Contacto","Home")">Contacto</a></li>
                         </ul>
                     </div>

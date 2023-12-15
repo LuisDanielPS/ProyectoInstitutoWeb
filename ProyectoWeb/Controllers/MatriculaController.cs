@@ -44,6 +44,12 @@ namespace ProyectoWeb.Controllers
         {
             try
             {
+                if (HttpContext.Session.GetString("RolUsuario") != "1")
+                {
+                    var idUsu = HttpContext.Session.GetString("IdUsuario");
+                    entidad.IdUsuario = int.Parse(idUsu);
+                }
+
                 var resp = _matriculaModel.RegistrarMatricula(entidad);
 
                 if (resp == -1)

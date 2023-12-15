@@ -62,9 +62,9 @@
                         <h5>Martes y Jueves</h5>
                         <p>6.00 pm a 9.00 pm</p>
                     </div>
-                    @if (User.Identity.IsAuthenticated)
+                    @if (Context.Session.GetString("RolUsuario") == "1" || Context.Session.GetString("RolUsuario") == "2" || Context.Session.GetString("RolUsuario") == "3" || Context.Session.GetString("RolUsuario") == "5")
                     {
-                        <a type="submit" class="btn btn-success" href="@Url.Action("Matricular","Home")">Matricular</a>
+                        <a type="submit" class="btn btn-success" href="@Url.Action("RegistrarMatricula","Matricula")">Matricular Curso</a>
                     }
                     else
                     {

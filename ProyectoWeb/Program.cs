@@ -9,8 +9,9 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 builder.Services.AddSingleton<IUsuarioModel, UsuarioModel>();
 builder.Services.AddSingleton<IMatriculaModel, MatriculaModel>();
-builder.Services.AddSingleton<IGrupoModel, GrupoModel>(); 
+builder.Services.AddSingleton<IGrupoModel, GrupoModel>();
 builder.Services.AddSingleton<IRolModel, RolModel>();
+builder.Services.AddSingleton<ICalificacionesModel, CalificacionesModel>();
 
 var app = builder.Build();
 

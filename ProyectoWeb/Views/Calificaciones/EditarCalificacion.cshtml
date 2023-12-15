@@ -1,0 +1,113 @@
+﻿@model CCIH.Entities.CalificacionesEnt
+
+@{
+    ViewBag.Title = "RegistrarCalificaciones";
+    Layout = "~/Views/Shared/_Layout_Administracion.cshtml";
+}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Editar Calificaciones</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Inicio</a></li>
+                <li class="breadcrumb-item">Calificaciones</li>
+                <li class="breadcrumb-item active">Consultar</li>
+                <li class="breadcrumb-item active">Editar</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        @using (Html.BeginForm("EditarCalificacion", "Calificaciones", FormMethod.Post))
+                        {
+
+                            @if (ViewBag.MsjPantalla != null)
+                            {
+                                <div id="Msj" style="text-align:center; margin-top: -5%;" class="alert alert-danger" role="alert">
+                                    @ViewBag.MsjPantalla
+                                </div>
+                            }
+
+                            @Html.HiddenFor(m => m.IdCalificacion)
+                            @Html.HiddenFor(m => m.IdCurso)
+                            @Html.HiddenFor(m => m.IdUsuario)
+
+                            <div class="row" style="text-align:center; position:center;">
+                                <div class="col-md-12">
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Primer Parcial</label>
+                                        @Html.TextBoxFor(
+                                    m => m.PrimerParcial,
+                                    new
+                                    {
+                                    @type = "number",
+                                    @placeholder = "Primer Parcial",
+                                    @id = "descripcion",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                    </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Segundo Parcial</label>
+                                        @Html.TextBoxFor(
+                                    m => m.SegundoParcial,
+                                    new
+                                    {
+                                    @type = "number",
+                                    @placeholder = "Segundo Parcial",
+                                    @id = "descripcion",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                    </div>
+
+                                    <div class="form-group" style="text-align: left; margin-top: 25px;">
+                                        <label>Tercer Parcial</label>
+                                        @Html.TextBoxFor(
+                                    m => m.TercerParcial,
+                                    new
+                                    {
+                                    @type = "number",
+                                    @placeholder = "Tercer Parcial",
+                                    @id = "descripcion",
+                                    @style = "text-align: center",
+                                    @class = "form-control form-control-lg",
+                                    @required = "required"
+                                    })
+                                    </div>
+
+
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-lg-6 order-lg-2">
+                                            <button type="submit" class="btn btn-outline-success btn-lg px-5">Registar</button>
+                                        </div>
+                                        <div class="col-lg-6 order-lg-1">
+                                            <button type="button" class="btn btn-secondary btn-lg px-5" onclick="window.history.back();">Regresar</button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+
+
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
